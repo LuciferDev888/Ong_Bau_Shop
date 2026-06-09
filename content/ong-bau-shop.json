@@ -1,0 +1,1524 @@
+{
+  "vi": {
+    "seoTitle": "Ông Bầu Shop - Trang Bị Bóng Đá Chính Hãng & Chuyên Nghiệp",
+    "seoDescription": "Hệ thống phân phối giày bóng đá, quần áo thi đấu và phụ kiện thể thao chính hãng. Giao hàng toàn quốc, cam kết 100% chất lượng cao.",
+    "campaignName": "ong_bau_shop_summer_2026",
+    "hero": {
+      "headline": "TRANG BỊ CHUYÊN NGHIỆP - CHINH PHỤC MỌI TRẬN ĐẤU",
+      "subheadline": "Hệ thống phân phối giày bóng đá, áo thi đấu và phụ kiện thể thao chính hãng. Nâng tầm phong độ của bạn ngay hôm nay cùng Ông Bầu Shop.",
+      "ctaText": "MUA NGAY HÔM NAY",
+      "ctaHref": "#products",
+      "backgroundImage": "/images/background/hero_background.png"
+    },
+    "categories": {
+      "title": "DANH MỤC SẢN PHẨM",
+      "subtitle": "Khám phá các trang bị bóng đá hàng đầu được các tuyển thủ tin dùng",
+      "items": [
+        {
+          "id": "boots",
+          "name": "Giày Bóng Đá",
+          "slug": "giày-bóng-đá",
+          "image": "/images/Football_boots/548210470_695313350228768_6976189092250864576_n.jpg",
+          "itemCount": 11
+        },
+        {
+          "id": "clothes",
+          "name": "Quần Áo Bóng Đá",
+          "slug": "quần-áo-bóng-đá",
+          "image": "/images/soccer_clothes/kamito/673065853_868764086217026_8237532365442671194_n.jpg",
+          "itemCount": 26
+        },
+        {
+          "id": "balo",
+          "name": "Balo & Túi Thể Thao",
+          "slug": "balo-thể-thao",
+          "image": "/images/balo/download.jpg",
+          "itemCount": 4
+        },
+        {
+          "id": "accessories",
+          "name": "Phụ Kiện Tập Luyện",
+          "slug": "phụ-kiện",
+          "image": "/images/Knee_support/download.jpg",
+          "itemCount": 10
+        }
+      ]
+    },
+    "products": {
+      "title": "SẢN PHẨM NỔI BẬT",
+      "subtitle": "Được chọn lọc kỹ lưỡng, mang lại trải nghiệm thi đấu tối ưu nhất",
+      "items": [
+        {
+          "id": "boot-1",
+          "name": "Giày Bóng Đá Kamito Cobra Pro Gold",
+          "category": "boots",
+          "price": 850000,
+          "originalPrice": 1200000,
+          "rating": 5,
+          "reviewsCount": 142,
+          "image": "/images/Football_boots/548210470_695313350228768_6976189092250864576_n.jpg",
+          "isHot": true,
+          "sizes": ["39", "40", "41", "42", "43"]
+        },
+        {
+          "id": "boot-2",
+          "name": "Giày Bóng Đá Kamito Cobra Pro White/Red",
+          "category": "boots",
+          "price": 850000,
+          "originalPrice": 1200000,
+          "rating": 4.9,
+          "reviewsCount": 87,
+          "image": "/images/Football_boots/546559514_694503000309803_2615155088747525706_n.jpg",
+          "isHot": false,
+          "sizes": ["39", "40", "41", "42", "43"]
+        },
+        {
+          "id": "boot-3",
+          "name": "Giày Bóng Đá Kamito Cobra Pro Black/Gold",
+          "category": "boots",
+          "price": 890000,
+          "originalPrice": 1250000,
+          "rating": 4.9,
+          "reviewsCount": 110,
+          "image": "/images/Football_boots/540335540_684387347988035_2073900630704714946_n.jpg",
+          "isHot": true,
+          "sizes": ["39", "40", "41", "42", "43"]
+        },
+        {
+          "id": "boot-4",
+          "name": "Giày Bóng Đá Kamito Veloz Blue/White",
+          "category": "boots",
+          "price": 790000,
+          "originalPrice": 990000,
+          "rating": 4.8,
+          "reviewsCount": 94,
+          "image": "/images/Football_boots/560007171_723586054068164_4097486310039373134_n.jpg",
+          "isHot": false,
+          "sizes": ["39", "40", "41", "42", "43"]
+        },
+        {
+          "id": "boot-5",
+          "name": "Giày Bóng Đá Kamito Veloz Black/Red",
+          "category": "boots",
+          "price": 790000,
+          "originalPrice": 990000,
+          "rating": 4.7,
+          "reviewsCount": 63,
+          "image": "/images/Football_boots/560193636_723586180734818_3305869455430713739_n.jpg",
+          "isHot": false,
+          "sizes": ["39", "40", "41", "42", "43"]
+        },
+        {
+          "id": "boot-6",
+          "name": "Giày Bóng Đá Wika Neo II Gold Premium",
+          "category": "boots",
+          "price": 650000,
+          "originalPrice": 850000,
+          "rating": 4.8,
+          "reviewsCount": 128,
+          "image": "/images/Football_boots/560929137_723586090734827_5583370646483484015_n.jpg",
+          "isHot": true,
+          "sizes": ["39", "40", "41", "42", "43"]
+        },
+        {
+          "id": "boot-7",
+          "name": "Giày Bóng Đá Wika Neo II Turquoise",
+          "category": "boots",
+          "price": 620000,
+          "originalPrice": 820000,
+          "rating": 4.6,
+          "reviewsCount": 54,
+          "image": "/images/Football_boots/561171331_723586124068157_8229673568395614681_n.jpg",
+          "isHot": false,
+          "sizes": ["39", "40", "41", "42", "43"]
+        },
+        {
+          "id": "boot-8",
+          "name": "Giày Bóng Đá Wika Neo II Orange Flare",
+          "category": "boots",
+          "price": 620000,
+          "originalPrice": 820000,
+          "rating": 4.7,
+          "reviewsCount": 72,
+          "image": "/images/Football_boots/561393895_723586100734826_3317004717311848800_n.jpg",
+          "isHot": false,
+          "sizes": ["39", "40", "41", "42", "43"]
+        },
+        {
+          "id": "boot-9",
+          "name": "Giày Bóng Đá Wika Neo II Black/Green",
+          "category": "boots",
+          "price": 620000,
+          "originalPrice": 820000,
+          "rating": 4.5,
+          "reviewsCount": 41,
+          "image": "/images/Football_boots/564012841_723586130734823_2613970207425466521_n.jpg",
+          "isHot": false,
+          "sizes": ["39", "40", "41", "42", "43"]
+        },
+        {
+          "id": "boot-10",
+          "name": "Giày Bóng Đá Kamito TA11 Premium TF",
+          "category": "boots",
+          "price": 890000,
+          "originalPrice": 1300000,
+          "rating": 4.9,
+          "reviewsCount": 215,
+          "image": "/images/Football_boots/565365642_723586157401487_5029011922515547216_n.jpg",
+          "isHot": true,
+          "sizes": ["39", "40", "41", "42", "43"]
+        },
+        {
+          "id": "boot-11",
+          "name": "Giày Bóng Đá Kamito TA11 Pro Coral/Grey",
+          "category": "boots",
+          "price": 820000,
+          "originalPrice": 1150000,
+          "rating": 4.8,
+          "reviewsCount": 99,
+          "image": "/images/Football_boots/565633601_723586047401498_5282503462910731982_n.jpg",
+          "isHot": false,
+          "sizes": ["39", "40", "41", "42", "43"]
+        },
+        {
+          "id": "clo-kam-1",
+          "name": "Bộ Quần Áo Bóng Đá Kamito Cobra Orange",
+          "category": "clothes",
+          "price": 249000,
+          "originalPrice": 349000,
+          "rating": 4.9,
+          "reviewsCount": 112,
+          "image": "/images/soccer_clothes/kamito/671727629_868763976217037_6248427600075867490_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kam-2",
+          "name": "Bộ Quần Áo Bóng Đá Kamito Cobra Cyan",
+          "category": "clothes",
+          "price": 249000,
+          "originalPrice": 349000,
+          "rating": 4.8,
+          "reviewsCount": 85,
+          "image": "/images/soccer_clothes/kamito/672095465_868763922883709_6381116784003011862_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kam-3",
+          "name": "Bộ Quần Áo Bóng Đá Kamito Cobra White",
+          "category": "clothes",
+          "price": 249000,
+          "originalPrice": 349000,
+          "rating": 4.7,
+          "reviewsCount": 73,
+          "image": "/images/soccer_clothes/kamito/672321637_868764149550353_3573206057969059388_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kam-4",
+          "name": "Bộ Quần Áo Bóng Đá Kamito Cobra Blue/Gold",
+          "category": "clothes",
+          "price": 269000,
+          "originalPrice": 379000,
+          "rating": 4.9,
+          "reviewsCount": 156,
+          "image": "/images/soccer_clothes/kamito/672680460_868764136217021_725458929434398592_n.jpg",
+          "isHot": true,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kam-5",
+          "name": "Bộ Quần Áo Bóng Đá Kamito Cobra Yellow/Black",
+          "category": "clothes",
+          "price": 249000,
+          "originalPrice": 349000,
+          "rating": 4.8,
+          "reviewsCount": 92,
+          "image": "/images/soccer_clothes/kamito/672682278_868764096217025_495262153922481869_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kam-6",
+          "name": "Bộ Quần Áo Bóng Đá Kamito Cobra Pink/Gold",
+          "category": "clothes",
+          "price": 269000,
+          "originalPrice": 379000,
+          "rating": 5,
+          "reviewsCount": 104,
+          "image": "/images/soccer_clothes/kamito/673065853_868764086217026_8237532365442671194_n.jpg",
+          "isHot": true,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kam-7",
+          "name": "Bộ Quần Áo Bóng Đá Kamito Cobra Gold/Red",
+          "category": "clothes",
+          "price": 249000,
+          "originalPrice": 349000,
+          "rating": 4.8,
+          "reviewsCount": 66,
+          "image": "/images/soccer_clothes/kamito/673118563_868764039550364_1635277509499508963_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kam-8",
+          "name": "Bộ Quần Áo Bóng Đá Kamito Cobra Black/Gold",
+          "category": "clothes",
+          "price": 285000,
+          "originalPrice": 395000,
+          "rating": 4.9,
+          "reviewsCount": 215,
+          "image": "/images/soccer_clothes/kamito/674286523_868763939550374_5953917136598584271_n.jpg",
+          "isHot": true,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kel-1",
+          "name": "Bộ Áo Đấu Kelme Pro Elite Red",
+          "category": "clothes",
+          "price": 310000,
+          "originalPrice": 450000,
+          "rating": 4.8,
+          "reviewsCount": 83,
+          "image": "/images/soccer_clothes/Kelme/678430944_874305608996207_5221596085370446251_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kel-2",
+          "name": "Bộ Áo Đấu Kelme Pro Elite Blue",
+          "category": "clothes",
+          "price": 310000,
+          "originalPrice": 450000,
+          "rating": 4.9,
+          "reviewsCount": 94,
+          "image": "/images/soccer_clothes/Kelme/678511626_874304505662984_3398711367839331974_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kel-3",
+          "name": "Bộ Áo Đấu Kelme Pro Elite White",
+          "category": "clothes",
+          "price": 310000,
+          "originalPrice": 450000,
+          "rating": 4.7,
+          "reviewsCount": 51,
+          "image": "/images/soccer_clothes/Kelme/678527874_874305155662919_6959671393219720_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kel-4",
+          "name": "Bộ Áo Đấu Kelme Pro Elite Yellow",
+          "category": "clothes",
+          "price": 310000,
+          "originalPrice": 450000,
+          "rating": 4.6,
+          "reviewsCount": 42,
+          "image": "/images/soccer_clothes/Kelme/678927116_874305035662931_4463121012632344348_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kel-5",
+          "name": "Bộ Áo Đấu Kelme Pro Elite Navy",
+          "category": "clothes",
+          "price": 330000,
+          "originalPrice": 480000,
+          "rating": 4.8,
+          "reviewsCount": 76,
+          "image": "/images/soccer_clothes/Kelme/678948862_874305638996204_6504041143095276291_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kel-6",
+          "name": "Bộ Áo Đấu Kelme Pro Elite Green",
+          "category": "clothes",
+          "price": 310000,
+          "originalPrice": 450000,
+          "rating": 4.7,
+          "reviewsCount": 38,
+          "image": "/images/soccer_clothes/Kelme/679347627_874305078996260_4216092920818113049_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kel-7",
+          "name": "Bộ Áo Đấu Kelme Pro Elite Orange",
+          "category": "clothes",
+          "price": 310000,
+          "originalPrice": 450000,
+          "rating": 4.8,
+          "reviewsCount": 61,
+          "image": "/images/soccer_clothes/Kelme/679407976_874305615662873_5706814468109942722_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kel-8",
+          "name": "Bộ Áo Đấu Kelme Elite Black/Gold Custom",
+          "category": "clothes",
+          "price": 350000,
+          "originalPrice": 500000,
+          "rating": 4.9,
+          "reviewsCount": 115,
+          "image": "/images/soccer_clothes/Kelme/a.jpg",
+          "isHot": true,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-ast-1",
+          "name": "Bộ Quần Áo Đấu Astra Sport Red Vibe",
+          "category": "clothes",
+          "price": 195000,
+          "originalPrice": 290000,
+          "rating": 4.7,
+          "reviewsCount": 45,
+          "image": "/images/soccer_clothes/astra/689339083_885177311242370_6309155655860184179_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-ast-2",
+          "name": "Bộ Quần Áo Đấu Astra Sport Neon Yellow",
+          "category": "clothes",
+          "price": 195000,
+          "originalPrice": 290000,
+          "rating": 4.6,
+          "reviewsCount": 39,
+          "image": "/images/soccer_clothes/astra/690000922_885177354575699_8424163134697546908_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-ast-3",
+          "name": "Bộ Quần Áo Đấu Astra Sport White/Blue",
+          "category": "clothes",
+          "price": 195000,
+          "originalPrice": 290000,
+          "rating": 4.8,
+          "reviewsCount": 57,
+          "image": "/images/soccer_clothes/astra/690646449_885177427909025_6567911281013531280_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-bas-1",
+          "name": "Bộ Đồ Đá Bóng Base01 Sport Green",
+          "category": "clothes",
+          "price": 220000,
+          "originalPrice": 320000,
+          "rating": 4.6,
+          "reviewsCount": 31,
+          "image": "/images/soccer_clothes/base01/687840260_885177297909038_8583245893047554419_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-bas-2",
+          "name": "Bộ Đồ Đá Bóng Base01 Sport Dynamic Blue",
+          "category": "clothes",
+          "price": 220000,
+          "originalPrice": 320000,
+          "rating": 4.8,
+          "reviewsCount": 64,
+          "image": "/images/soccer_clothes/base01/691460584_885177387909029_1578890007885752668_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-bas-3",
+          "name": "Bộ Đồ Đá Bóng Base01 Sport Fire Red",
+          "category": "clothes",
+          "price": 220000,
+          "originalPrice": 320000,
+          "rating": 4.7,
+          "reviewsCount": 42,
+          "image": "/images/soccer_clothes/base01/694661739_885177231242378_1310410735008648044_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kir-1",
+          "name": "Bộ Quần Áo Kira Striker Blue",
+          "category": "clothes",
+          "price": 230000,
+          "originalPrice": 330000,
+          "rating": 4.8,
+          "reviewsCount": 81,
+          "image": "/images/soccer_clothes/kira/690645508_885177404575694_7090540849557345049_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kir-2",
+          "name": "Bộ Quần Áo Kira Striker Classic White",
+          "category": "clothes",
+          "price": 230000,
+          "originalPrice": 330000,
+          "rating": 4.7,
+          "reviewsCount": 54,
+          "image": "/images/soccer_clothes/kira/690659491_885177437909024_4053885363790321421_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kir-3",
+          "name": "Bộ Quần Áo Kira Striker Cyan Ocean",
+          "category": "clothes",
+          "price": 230000,
+          "originalPrice": 330000,
+          "rating": 4.9,
+          "reviewsCount": 77,
+          "image": "/images/soccer_clothes/kira/690665354_885177331242368_6964467052287985850_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kir-4",
+          "name": "Bộ Quần Áo Kira Striker Bold Red",
+          "category": "clothes",
+          "price": 250000,
+          "originalPrice": 360000,
+          "rating": 4.9,
+          "reviewsCount": 102,
+          "image": "/images/soccer_clothes/kira/691448784_885177241242377_2028251402260622829_n.jpg",
+          "isHot": true,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "balo-1",
+          "name": "Balo Thể Thao Kamito Pro Black",
+          "category": "balo",
+          "price": 380000,
+          "originalPrice": 520000,
+          "rating": 4.8,
+          "reviewsCount": 56,
+          "image": "/images/balo/download (1).jpg",
+          "isHot": false,
+          "sizes": ["One Size"]
+        },
+        {
+          "id": "balo-2",
+          "name": "Balo Thể Thao Kelme Pro Red",
+          "category": "balo",
+          "price": 420000,
+          "originalPrice": 580000,
+          "rating": 4.9,
+          "reviewsCount": 73,
+          "image": "/images/balo/download (2).jpg",
+          "isHot": true,
+          "sizes": ["One Size"]
+        },
+        {
+          "id": "balo-3",
+          "name": "Balo Thể Thao Active Grey Casual",
+          "category": "balo",
+          "price": 350000,
+          "originalPrice": 480000,
+          "rating": 4.7,
+          "reviewsCount": 38,
+          "image": "/images/balo/download (3).jpg",
+          "isHot": false,
+          "sizes": ["One Size"]
+        },
+        {
+          "id": "balo-4",
+          "name": "Balo Thể Thao Ông Bầu Signature Pro",
+          "category": "balo",
+          "price": 390000,
+          "originalPrice": 550000,
+          "rating": 5,
+          "reviewsCount": 118,
+          "image": "/images/balo/download.jpg",
+          "isHot": true,
+          "sizes": ["One Size"]
+        },
+        {
+          "id": "acc-knee-1",
+          "name": "Băng Bảo Vệ Gối Silicon Chống Lệch Khớp",
+          "category": "accessories",
+          "price": 180000,
+          "originalPrice": 280000,
+          "rating": 4.9,
+          "reviewsCount": 186,
+          "image": "/images/Knee_support/download.jpg",
+          "isHot": true,
+          "sizes": ["M", "L", "XL"]
+        },
+        {
+          "id": "acc-knee-2",
+          "name": "Băng Đầu Gối Silicon Bảo Vệ Dây Chằng (Đen)",
+          "category": "accessories",
+          "price": 175000,
+          "originalPrice": 250000,
+          "rating": 4.8,
+          "reviewsCount": 94,
+          "image": "/images/Knee_support/download (1).jpg",
+          "isHot": false,
+          "sizes": ["M", "L", "XL"]
+        },
+        {
+          "id": "acc-knee-3",
+          "name": "Băng Đầu Gối Dệt Kim Thoáng Khí (Xám)",
+          "category": "accessories",
+          "price": 160000,
+          "originalPrice": 230000,
+          "rating": 4.7,
+          "reviewsCount": 51,
+          "image": "/images/Knee_support/download (5).jpg",
+          "isHot": false,
+          "sizes": ["M", "L", "XL"]
+        },
+        {
+          "id": "acc-knee-4",
+          "name": "Băng Đầu Gối Co Giãn 4 Chiều (Xanh)",
+          "category": "accessories",
+          "price": 120000,
+          "originalPrice": 180000,
+          "rating": 4.5,
+          "reviewsCount": 38,
+          "image": "/images/Knee_support/images (1).jpg",
+          "isHot": false,
+          "sizes": ["M", "L", "XL"]
+        },
+        {
+          "id": "acc-knee-5",
+          "name": "Băng Đầu Gối Chống Trượt Cao Cấp (Xám-Đen)",
+          "category": "accessories",
+          "price": 195000,
+          "originalPrice": 300000,
+          "rating": 4.9,
+          "reviewsCount": 112,
+          "image": "/images/Knee_support/images.jpg",
+          "isHot": true,
+          "sizes": ["M", "L", "XL"]
+        },
+        {
+          "id": "acc-sock-1",
+          "name": "Vớ Bóng Đá Cổ Cao Sợi Tre Kháng Khuẩn (Trắng)",
+          "category": "accessories",
+          "price": 60000,
+          "originalPrice": 90000,
+          "rating": 4.8,
+          "reviewsCount": 312,
+          "image": "/images/soccer_socks/download.jpg",
+          "isHot": false,
+          "sizes": ["One Size"]
+        },
+        {
+          "id": "acc-sock-2",
+          "name": "Vớ Bóng Đá Chống Trượt Kamito Pro (Đen)",
+          "category": "accessories",
+          "price": 75000,
+          "originalPrice": 110000,
+          "rating": 4.9,
+          "reviewsCount": 245,
+          "image": "/images/soccer_socks/download (1).jpg",
+          "isHot": true,
+          "sizes": ["One Size"]
+        },
+        {
+          "id": "acc-sock-3",
+          "name": "Vớ Bóng Đá Chống Trượt Kamito Pro (Trắng)",
+          "category": "accessories",
+          "price": 75000,
+          "originalPrice": 110000,
+          "rating": 4.9,
+          "reviewsCount": 198,
+          "image": "/images/soccer_socks/download (2).jpg",
+          "isHot": false,
+          "sizes": ["One Size"]
+        },
+        {
+          "id": "acc-sock-4",
+          "name": "Vớ Bóng Đá Dệt Kim Thể Thao (Xanh)",
+          "category": "accessories",
+          "price": 45000,
+          "originalPrice": 70000,
+          "rating": 4.6,
+          "reviewsCount": 83,
+          "image": "/images/soccer_socks/download (3).jpg",
+          "isHot": false,
+          "sizes": ["One Size"]
+        },
+        {
+          "id": "acc-sock-5",
+          "name": "Vớ Bóng Đá Cổ Ngắn Chống Trượt (Đỏ)",
+          "category": "accessories",
+          "price": 55000,
+          "originalPrice": 80000,
+          "rating": 4.7,
+          "reviewsCount": 62,
+          "image": "/images/soccer_socks/download (4).jpg",
+          "isHot": false,
+          "sizes": ["One Size"]
+        }
+      ]
+    },
+    "benefits": {
+      "title": "TẠI SAO CHỌN ÔNG BẦU SHOP?",
+      "subtitle": "Chúng tôi tự hào mang lại dịch vụ và chất lượng sản phẩm tốt nhất cho người chơi bóng đá",
+      "items": [
+        {
+          "id": "ben-1",
+          "title": "100% Chính Hãng",
+          "description": "Cam kết các thương hiệu Kamito, Kelme, Wika chính hãng 100%, đền 200% nếu phát hiện hàng giả.",
+          "icon": "ShieldCheck"
+        },
+        {
+          "id": "ben-2",
+          "title": "Giao Hàng Siêu Tốc",
+          "description": "Giao hàng nội thành trong 2h, giao hỏa tốc toàn quốc từ 1-3 ngày, nhận hàng kiểm tra mới thanh toán.",
+          "icon": "Truck"
+        },
+        {
+          "id": "ben-3",
+          "title": "Đổi Trả Dễ Dàng",
+          "description": "Hỗ trợ đổi size hoặc mẫu miễn phí trong 7 ngày kể từ khi nhận hàng nếu chưa qua sử dụng.",
+          "icon": "RotateCcw"
+        },
+        {
+          "id": "ben-4",
+          "title": "Bảo Hành Uy Tín",
+          "description": "Bảo hành keo chỉ 3 tháng cho toàn bộ sản phẩm giày đá bóng bán ra từ Ông Bầu Shop.",
+          "icon": "Award"
+        }
+      ]
+    },
+    "promo": {
+      "title": "ƯU ĐÃI THÀNH VIÊN - MÙA HÈ RỰC LỬA",
+      "description": "Sở hữu ngay siêu phẩm Giày Bóng Đá Kamito Cobra Pro với mức giá ưu đãi cực lớn giảm đến 30%. Số lượng có hạn chỉ dành cho 100 khách hàng đăng ký sớm nhất.",
+      "highlightText": "Giảm Ngay 30% + Tặng Kèm Đôi Vớ Chống Trượt Cao Cấp",
+      "discountCode": "ONGBAU30",
+      "ctaText": "NHẬN ƯU ĐÃI NGAY",
+      "ctaHref": "#lead-form",
+      "image": "/images/overview/562162745_723586010734835_2162876265339829697_n.jpg",
+      "endsInSeconds": 86400
+    },
+    "testimonials": {
+      "title": "KHÁCH HÀNG NÓI VỀ CHÚNG TÔI",
+      "subtitle": "Sự tin tưởng và đồng hành của hơn 10.000+ cầu thủ phong trào lẫn chuyên nghiệp",
+      "items": [
+        {
+          "id": "test-1",
+          "name": "Nguyễn Hoàng Đức",
+          "role": "Tuyển thủ Đội tuyển Quốc gia Việt Nam",
+          "avatar": "/images/soccer_clothes/Kelme/678511626_874304505662984_3398711367839331974_n.jpg",
+          "comment": "Giày đá bóng Kamito đi rất êm chân, bám sân cực tốt. Bộ quần áo Kelme co giãn tốt, thấm hút mồ hôi nhanh giúp tôi tự tin thi đấu suốt 90 phút.",
+          "rating": 5,
+          "verified": true
+        },
+        {
+          "id": "test-2",
+          "name": "Trần Văn Huy",
+          "role": "Cầu thủ phong trào - FC Hữu Nghị",
+          "avatar": "/images/Football_boots/540335540_684387347988035_2073900630704714946_n.jpg",
+          "comment": "Mua hàng ở Ông Bầu Shop luôn yên tâm về chất lượng. Nhân viên tư vấn nhiệt tình, chọn size giày rất chuẩn. Sẽ tiếp tục ủng hộ shop lâu dài.",
+          "rating": 5,
+          "verified": true
+        },
+        {
+          "id": "test-3",
+          "name": "Lê Minh Tuấn",
+          "role": "Trưởng đoàn FC Bách Khoa",
+          "avatar": "/images/soccer_clothes/kira/690645508_885177404575694_7090540849557345049_n.jpg",
+          "comment": "Tôi đặt may đồng phục cho cả đội 30 người tại shop. Chất vải mát, in ấn sắc nét, giao hàng đúng hạn. Đội bóng của tôi ai cũng ưng ý.",
+          "rating": 5,
+          "verified": true
+        }
+      ]
+    },
+    "faq": [
+      {
+        "question": "Ông Bầu Shop có cam kết hàng chính hãng không?",
+        "answer": "Chúng tôi cam kết 100% sản phẩm bán ra đều là chính hãng từ các thương hiệu lớn như Kamito, Kelme, Wika... Nếu khách hàng phát hiện hàng giả, hàng nhái, Ông Bầu Shop cam kết đền tiền gấp 2 lần giá trị sản phẩm."
+      },
+      {
+        "question": "Tôi mua giày bóng đá nhưng đi không vừa thì có được đổi size không?",
+        "answer": "Hoàn toàn được. Ông Bầu Shop hỗ trợ đổi size miễn phí trong vòng 7 ngày kể từ ngày bạn nhận hàng, với điều kiện giày chưa qua sử dụng trên sân cỏ (đế giày còn mới sạch, nguyên tem mác hộp)."
+      },
+      {
+        "question": "Shop có ship hàng hỏa tốc trong ngày không?",
+        "answer": "Có. Đối với các đơn hàng tại Hà Nội và TP.HCM, shop hỗ trợ giao hàng hỏa tốc trong vòng 2 giờ thông qua các dịch vụ Grab/Ahamove. Đối với các tỉnh thành khác, thời gian giao hàng từ 1-3 ngày."
+      },
+      {
+        "question": "Chế độ bảo hành giày bóng đá tại Ông Bầu Shop như thế nào?",
+        "answer": "Tất cả các sản phẩm giày bóng đá mua tại Ông Bầu Shop đều được bảo hành keo, chỉ khâu đế trong vòng 90 ngày. Khi có sự cố bong keo hay đứt chỉ, bạn chỉ cần gửi sản phẩm về shop để được bảo hành miễn phí."
+      }
+    ],
+    "cta": {
+      "title": "NÂNG TẦM TRẢI NGHIỆM BÓNG ĐÁ CỦA BẠN",
+      "description": "Đừng để trang bị kém chất lượng cản bước đam mê. Đăng ký nhận tư vấn chọn trang bị bóng đá phù hợp và nhận ngay mã giảm giá 30% từ Ông Bầu Shop.",
+      "ctaText": "ĐĂNG KÝ TƯ VẤN NGAY",
+      "ctaHref": "#lead-form"
+    }
+  },
+  "en": {
+    "seoTitle": "Ong Bau Shop - Authentic & Professional Football Equipment",
+    "seoDescription": "Distributor of official soccer cleats, club jerseys and sports accessories. Nationwide fast delivery, 100% premium quality guaranteed.",
+    "campaignName": "ong_bau_shop_summer_2026",
+    "hero": {
+      "headline": "PROFESSIONAL GEAR - CONQUER EVERY MATCH",
+      "subheadline": "Premier distributor of authentic football boots, club jerseys, and professional accessories. Elevate your performance today with Ong Bau Shop.",
+      "ctaText": "SHOP THE DEALS NOW",
+      "ctaHref": "#products",
+      "backgroundImage": "/images/background/hero_background.png"
+    },
+    "categories": {
+      "title": "PRODUCT CATEGORIES",
+      "subtitle": "Discover world-class soccer equipment trusted by pro athletes",
+      "items": [
+        {
+          "id": "boots",
+          "name": "Football Boots",
+          "slug": "football-boots",
+          "image": "/images/Football_boots/548210470_695313350228768_6976189092250864576_n.jpg",
+          "itemCount": 11
+        },
+        {
+          "id": "clothes",
+          "name": "Soccer Clothes",
+          "slug": "soccer-clothes",
+          "image": "/images/soccer_clothes/kamito/673065853_868764086217026_8237532365442671194_n.jpg",
+          "itemCount": 26
+        },
+        {
+          "id": "balo",
+          "name": "Sport Backpacks",
+          "slug": "sport-backpacks",
+          "image": "/images/balo/download.jpg",
+          "itemCount": 4
+        },
+        {
+          "id": "accessories",
+          "name": "Training Accessories",
+          "slug": "training-accessories",
+          "image": "/images/Knee_support/download.jpg",
+          "itemCount": 10
+        }
+      ]
+    },
+    "products": {
+      "title": "FEATURED PRODUCTS",
+      "subtitle": "Carefully selected gear engineered for optimal on-field performance",
+      "items": [
+        {
+          "id": "boot-1",
+          "name": "Kamito Cobra Pro TF - Gold/Black Edition",
+          "category": "boots",
+          "price": 850000,
+          "originalPrice": 1200000,
+          "rating": 5,
+          "reviewsCount": 142,
+          "image": "/images/Football_boots/548210470_695313350228768_6976189092250864576_n.jpg",
+          "isHot": true,
+          "sizes": ["39", "40", "41", "42", "43"]
+        },
+        {
+          "id": "boot-2",
+          "name": "Kamito Cobra Pro TF - White/Red Blast",
+          "category": "boots",
+          "price": 850000,
+          "originalPrice": 1200000,
+          "rating": 4.9,
+          "reviewsCount": 87,
+          "image": "/images/Football_boots/546559514_694503000309803_2615155088747525706_n.jpg",
+          "isHot": false,
+          "sizes": ["39", "40", "41", "42", "43"]
+        },
+        {
+          "id": "boot-3",
+          "name": "Kamito Cobra Pro TF - Onyx Stealth Black",
+          "category": "boots",
+          "price": 890000,
+          "originalPrice": 1250000,
+          "rating": 4.9,
+          "reviewsCount": 110,
+          "image": "/images/Football_boots/540335540_684387347988035_2073900630704714946_n.jpg",
+          "isHot": true,
+          "sizes": ["39", "40", "41", "42", "43"]
+        },
+        {
+          "id": "boot-4",
+          "name": "Kamito Veloz Turf Cleats - Royal Blue/White",
+          "category": "boots",
+          "price": 790000,
+          "originalPrice": 990000,
+          "rating": 4.8,
+          "reviewsCount": 94,
+          "image": "/images/Football_boots/560007171_723586054068164_4097486310039373134_n.jpg",
+          "isHot": false,
+          "sizes": ["39", "40", "41", "42", "43"]
+        },
+        {
+          "id": "boot-5",
+          "name": "Kamito Veloz Turf Cleats - Black/Crimson",
+          "category": "boots",
+          "price": 790000,
+          "originalPrice": 990000,
+          "rating": 4.7,
+          "reviewsCount": 63,
+          "image": "/images/Football_boots/560193636_723586180734818_3305869455430713739_n.jpg",
+          "isHot": false,
+          "sizes": ["39", "40", "41", "42", "43"]
+        },
+        {
+          "id": "boot-6",
+          "name": "Wika Neo II Turf Cleats - Gold Premium",
+          "category": "boots",
+          "price": 650000,
+          "originalPrice": 850000,
+          "rating": 4.8,
+          "reviewsCount": 128,
+          "image": "/images/Football_boots/560929137_723586090734827_5583370646483484015_n.jpg",
+          "isHot": true,
+          "sizes": ["39", "40", "41", "42", "43"]
+        },
+        {
+          "id": "boot-7",
+          "name": "Wika Neo II Turf Cleats - Turquoise Wave",
+          "category": "boots",
+          "price": 620000,
+          "originalPrice": 820000,
+          "rating": 4.6,
+          "reviewsCount": 54,
+          "image": "/images/Football_boots/561171331_723586124068157_8229673568395614681_n.jpg",
+          "isHot": false,
+          "sizes": ["39", "40", "41", "42", "43"]
+        },
+        {
+          "id": "boot-8",
+          "name": "Wika Neo II Turf Cleats - Orange Flare",
+          "category": "boots",
+          "price": 620000,
+          "originalPrice": 820000,
+          "rating": 4.7,
+          "reviewsCount": 72,
+          "image": "/images/Football_boots/561393895_723586100734826_3317004717311848800_n.jpg",
+          "isHot": false,
+          "sizes": ["39", "40", "41", "42", "43"]
+        },
+        {
+          "id": "boot-9",
+          "name": "Wika Neo II Turf Cleats - Cyber Green/Black",
+          "category": "boots",
+          "price": 620000,
+          "originalPrice": 820000,
+          "rating": 4.5,
+          "reviewsCount": 41,
+          "image": "/images/Football_boots/564012841_723586130734823_2613970207425466521_n.jpg",
+          "isHot": false,
+          "sizes": ["39", "40", "41", "42", "43"]
+        },
+        {
+          "id": "boot-10",
+          "name": "Kamito TA11 Premium TF - Signature Cleats",
+          "category": "boots",
+          "price": 890000,
+          "originalPrice": 1300000,
+          "rating": 4.9,
+          "reviewsCount": 215,
+          "image": "/images/Football_boots/565365642_723586157401487_5029011922515547216_n.jpg",
+          "isHot": true,
+          "sizes": ["39", "40", "41", "42", "43"]
+        },
+        {
+          "id": "boot-11",
+          "name": "Kamito TA11 Pro TF - Coral/Storm Grey",
+          "category": "boots",
+          "price": 820000,
+          "originalPrice": 1150000,
+          "rating": 4.8,
+          "reviewsCount": 99,
+          "image": "/images/Football_boots/565633601_723586047401498_5282503462910731982_n.jpg",
+          "isHot": false,
+          "sizes": ["39", "40", "41", "42", "43"]
+        },
+        {
+          "id": "clo-kam-1",
+          "name": "Kamito Cobra Football Jersey - Burst Orange",
+          "category": "clothes",
+          "price": 249000,
+          "originalPrice": 349000,
+          "rating": 4.9,
+          "reviewsCount": 112,
+          "image": "/images/soccer_clothes/kamito/671727629_868763976217037_6248427600075867490_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kam-2",
+          "name": "Kamito Cobra Football Jersey - Sky Cyan",
+          "category": "clothes",
+          "price": 249000,
+          "originalPrice": 349000,
+          "rating": 4.8,
+          "reviewsCount": 85,
+          "image": "/images/soccer_clothes/kamito/672095465_868763922883709_6381116784003011862_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kam-3",
+          "name": "Kamito Cobra Football Jersey - Blanc White",
+          "category": "clothes",
+          "price": 249000,
+          "originalPrice": 349000,
+          "rating": 4.7,
+          "reviewsCount": 73,
+          "image": "/images/soccer_clothes/kamito/672321637_868764149550353_3573206057969059388_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kam-4",
+          "name": "Kamito Cobra Football Jersey - Royal Blue/Gold",
+          "category": "clothes",
+          "price": 269000,
+          "originalPrice": 379000,
+          "rating": 4.9,
+          "reviewsCount": 156,
+          "image": "/images/soccer_clothes/kamito/672680460_868764136217021_725458929434398592_n.jpg",
+          "isHot": true,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kam-5",
+          "name": "Kamito Cobra Football Jersey - Amber/Slate Black",
+          "category": "clothes",
+          "price": 249000,
+          "originalPrice": 349000,
+          "rating": 4.8,
+          "reviewsCount": 92,
+          "image": "/images/soccer_clothes/kamito/672682278_868764096217025_495262153922481869_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kam-6",
+          "name": "Kamito Cobra Football Jersey - Radiant Pink/Gold",
+          "category": "clothes",
+          "price": 269000,
+          "originalPrice": 379000,
+          "rating": 5,
+          "reviewsCount": 104,
+          "image": "/images/soccer_clothes/kamito/673065853_868764086217026_8237532365442671194_n.jpg",
+          "isHot": true,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kam-7",
+          "name": "Kamito Cobra Football Jersey - Gold Dust/Crimson",
+          "category": "clothes",
+          "price": 249000,
+          "originalPrice": 349000,
+          "rating": 4.8,
+          "reviewsCount": 66,
+          "image": "/images/soccer_clothes/kamito/673118563_868764039550364_1635277509499508963_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kam-8",
+          "name": "Kamito Cobra Football Jersey - Eclipse Black/Gold",
+          "category": "clothes",
+          "price": 285000,
+          "originalPrice": 395000,
+          "rating": 4.9,
+          "reviewsCount": 215,
+          "image": "/images/soccer_clothes/kamito/674286523_868763939550374_5953917136598584271_n.jpg",
+          "isHot": true,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kel-1",
+          "name": "Kelme Pro Elite Football Shirt - Scarlet Red",
+          "category": "clothes",
+          "price": 310000,
+          "originalPrice": 450000,
+          "rating": 4.8,
+          "reviewsCount": 83,
+          "image": "/images/soccer_clothes/Kelme/678430944_874305608996207_5221596085370446251_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kel-2",
+          "name": "Kelme Pro Elite Football Shirt - Royal Blue",
+          "category": "clothes",
+          "price": 310000,
+          "originalPrice": 450000,
+          "rating": 4.9,
+          "reviewsCount": 94,
+          "image": "/images/soccer_clothes/Kelme/678511626_874304505662984_3398711367839331974_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kel-3",
+          "name": "Kelme Pro Elite Football Shirt - Classic White",
+          "category": "clothes",
+          "price": 310000,
+          "originalPrice": 450000,
+          "rating": 4.7,
+          "reviewsCount": 51,
+          "image": "/images/soccer_clothes/Kelme/678527874_874305155662919_6959671393219720_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kel-4",
+          "name": "Kelme Pro Elite Football Shirt - Electric Yellow",
+          "category": "clothes",
+          "price": 310000,
+          "originalPrice": 450000,
+          "rating": 4.6,
+          "reviewsCount": 42,
+          "image": "/images/soccer_clothes/Kelme/678927116_874305035662931_4463121012632344348_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kel-5",
+          "name": "Kelme Pro Elite Football Shirt - Navy Blue",
+          "category": "clothes",
+          "price": 330000,
+          "originalPrice": 480000,
+          "rating": 4.8,
+          "reviewsCount": 76,
+          "image": "/images/soccer_clothes/Kelme/678948862_874305638996204_6504041143095276291_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kel-6",
+          "name": "Kelme Pro Elite Football Shirt - Forest Green",
+          "category": "clothes",
+          "price": 310000,
+          "originalPrice": 450000,
+          "rating": 4.7,
+          "reviewsCount": 38,
+          "image": "/images/soccer_clothes/Kelme/679347627_874305078996260_4216092920818113049_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kel-7",
+          "name": "Kelme Pro Elite Football Shirt - Vibrant Orange",
+          "category": "clothes",
+          "price": 310000,
+          "originalPrice": 450000,
+          "rating": 4.8,
+          "reviewsCount": 61,
+          "image": "/images/soccer_clothes/Kelme/679407976_874305615662873_5706814468109942722_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kel-8",
+          "name": "Kelme Elite Football Kit - Onyx Black/Gold",
+          "category": "clothes",
+          "price": 350000,
+          "originalPrice": 500000,
+          "rating": 4.9,
+          "reviewsCount": 115,
+          "image": "/images/soccer_clothes/Kelme/a.jpg",
+          "isHot": true,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-ast-1",
+          "name": "Astra Sport Football Kit - Crimson Red",
+          "category": "clothes",
+          "price": 195000,
+          "originalPrice": 290000,
+          "rating": 4.7,
+          "reviewsCount": 45,
+          "image": "/images/soccer_clothes/astra/689339083_885177311242370_6309155655860184179_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-ast-2",
+          "name": "Astra Sport Football Kit - Cyber Yellow",
+          "category": "clothes",
+          "price": 195000,
+          "originalPrice": 290000,
+          "rating": 4.6,
+          "reviewsCount": 39,
+          "image": "/images/soccer_clothes/astra/690000922_885177354575699_8424163134697546908_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-ast-3",
+          "name": "Astra Sport Football Kit - Glacier White/Blue",
+          "category": "clothes",
+          "price": 195000,
+          "originalPrice": 290000,
+          "rating": 4.8,
+          "reviewsCount": 57,
+          "image": "/images/soccer_clothes/astra/690646449_885177427909025_6567911281013531280_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-bas-1",
+          "name": "Base01 Sports Training Kit - Kelly Green",
+          "category": "clothes",
+          "price": 220000,
+          "originalPrice": 320000,
+          "rating": 4.6,
+          "reviewsCount": 31,
+          "image": "/images/soccer_clothes/base01/687840260_885177297909038_8583245893047554419_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-bas-2",
+          "name": "Base01 Sports Training Kit - Electric Blue",
+          "category": "clothes",
+          "price": 220000,
+          "originalPrice": 320000,
+          "rating": 4.8,
+          "reviewsCount": 64,
+          "image": "/images/soccer_clothes/base01/691460584_885177387909029_1578890007885752668_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-bas-3",
+          "name": "Base01 Sports Training Kit - Pyro Red",
+          "category": "clothes",
+          "price": 220000,
+          "originalPrice": 320000,
+          "rating": 4.7,
+          "reviewsCount": 42,
+          "image": "/images/soccer_clothes/base01/694661739_885177231242378_1310410735008648044_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kir-1",
+          "name": "Kira Striker Soccer Jersey - Cobalt Blue",
+          "category": "clothes",
+          "price": 230000,
+          "originalPrice": 330000,
+          "rating": 4.8,
+          "reviewsCount": 81,
+          "image": "/images/soccer_clothes/kira/690645508_885177404575694_7090540849557345049_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kir-2",
+          "name": "Kira Striker Soccer Jersey - Ice White",
+          "category": "clothes",
+          "price": 230000,
+          "originalPrice": 330000,
+          "rating": 4.7,
+          "reviewsCount": 54,
+          "image": "/images/soccer_clothes/kira/690659491_885177437909024_4053885363790321421_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kir-3",
+          "name": "Kira Striker Soccer Jersey - Ocean Teal",
+          "category": "clothes",
+          "price": 230000,
+          "originalPrice": 330000,
+          "rating": 4.9,
+          "reviewsCount": 77,
+          "image": "/images/soccer_clothes/kira/690665354_885177331242368_6964467052287985850_n.jpg",
+          "isHot": false,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "clo-kir-4",
+          "name": "Kira Striker Soccer Jersey - Bold Red",
+          "category": "clothes",
+          "price": 250000,
+          "originalPrice": 360000,
+          "rating": 4.9,
+          "reviewsCount": 102,
+          "image": "/images/soccer_clothes/kira/691448784_885177241242377_2028251402260622829_n.jpg",
+          "isHot": true,
+          "sizes": ["S", "M", "L", "XL", "XXL"]
+        },
+        {
+          "id": "balo-1",
+          "name": "Kamito Pro Backpack - Stealth Black",
+          "category": "balo",
+          "price": 380000,
+          "originalPrice": 520000,
+          "rating": 4.8,
+          "reviewsCount": 56,
+          "image": "/images/balo/download (1).jpg",
+          "isHot": false,
+          "sizes": ["One Size"]
+        },
+        {
+          "id": "balo-2",
+          "name": "Kelme Pro Team Backpack - Fire Red",
+          "category": "balo",
+          "price": 420000,
+          "originalPrice": 580000,
+          "rating": 4.9,
+          "reviewsCount": 73,
+          "image": "/images/balo/download (2).jpg",
+          "isHot": true,
+          "sizes": ["One Size"]
+        },
+        {
+          "id": "balo-3",
+          "name": "Active Grey Backpack - Commuter Style",
+          "category": "balo",
+          "price": 350000,
+          "originalPrice": 480000,
+          "rating": 4.7,
+          "reviewsCount": 38,
+          "image": "/images/balo/download (3).jpg",
+          "isHot": false,
+          "sizes": ["One Size"]
+        },
+        {
+          "id": "balo-4",
+          "name": "Ong Bau Signature Pro Sports Backpack",
+          "category": "balo",
+          "price": 390000,
+          "originalPrice": 550000,
+          "rating": 5,
+          "reviewsCount": 118,
+          "image": "/images/balo/download.jpg",
+          "isHot": true,
+          "sizes": ["One Size"]
+        },
+        {
+          "id": "acc-knee-1",
+          "name": "Silicon Kneepad - Pro Support Bandage",
+          "category": "accessories",
+          "price": 180000,
+          "originalPrice": 280000,
+          "rating": 4.9,
+          "reviewsCount": 186,
+          "image": "/images/Knee_support/download.jpg",
+          "isHot": true,
+          "sizes": ["M", "L", "XL"]
+        },
+        {
+          "id": "acc-knee-2",
+          "name": "Patella Support Bandage (Noir Black)",
+          "category": "accessories",
+          "price": 175000,
+          "originalPrice": 250000,
+          "rating": 4.8,
+          "reviewsCount": 94,
+          "image": "/images/Knee_support/download (1).jpg",
+          "isHot": false,
+          "sizes": ["M", "L", "XL"]
+        },
+        {
+          "id": "acc-knee-3",
+          "name": "Knitted Compression Knee Sleeve (Carbon)",
+          "category": "accessories",
+          "price": 160000,
+          "originalPrice": 230000,
+          "rating": 4.7,
+          "reviewsCount": 51,
+          "image": "/images/Knee_support/download (5).jpg",
+          "isHot": false,
+          "sizes": ["M", "L", "XL"]
+        },
+        {
+          "id": "acc-knee-4",
+          "name": "4-Way Elastic Knee Support Guard (Ocean Blue)",
+          "category": "accessories",
+          "price": 120000,
+          "originalPrice": 180000,
+          "rating": 4.5,
+          "reviewsCount": 38,
+          "image": "/images/Knee_support/images (1).jpg",
+          "isHot": false,
+          "sizes": ["M", "L", "XL"]
+        },
+        {
+          "id": "acc-knee-5",
+          "name": "Non-Slip Protective Knee Shield (Stealth Grey)",
+          "category": "accessories",
+          "price": 195000,
+          "originalPrice": 300000,
+          "rating": 4.9,
+          "reviewsCount": 112,
+          "image": "/images/Knee_support/images.jpg",
+          "isHot": true,
+          "sizes": ["M", "L", "XL"]
+        },
+        {
+          "id": "acc-sock-1",
+          "name": "Bamboo Fiber Anti-Bacterial Socks (White)",
+          "category": "accessories",
+          "price": 60000,
+          "originalPrice": 90000,
+          "rating": 4.8,
+          "reviewsCount": 312,
+          "image": "/images/soccer_socks/download.jpg",
+          "isHot": false,
+          "sizes": ["One Size"]
+        },
+        {
+          "id": "acc-sock-2",
+          "name": "Kamito Pro Anti-Slip Grippy Socks (Stealth)",
+          "category": "accessories",
+          "price": 75000,
+          "originalPrice": 110000,
+          "rating": 4.9,
+          "reviewsCount": 245,
+          "image": "/images/soccer_socks/download (1).jpg",
+          "isHot": true,
+          "sizes": ["One Size"]
+        },
+        {
+          "id": "acc-sock-3",
+          "name": "Kamito Pro Anti-Slip Grippy Socks (Classic)",
+          "category": "accessories",
+          "price": 75000,
+          "originalPrice": 110000,
+          "rating": 4.9,
+          "reviewsCount": 198,
+          "image": "/images/soccer_socks/download (2).jpg",
+          "isHot": false,
+          "sizes": ["One Size"]
+        },
+        {
+          "id": "acc-sock-4",
+          "name": "Performance Knitted Football Socks (Royal Blue)",
+          "category": "accessories",
+          "price": 45000,
+          "originalPrice": 70000,
+          "rating": 4.6,
+          "reviewsCount": 83,
+          "image": "/images/soccer_socks/download (3).jpg",
+          "isHot": false,
+          "sizes": ["One Size"]
+        },
+        {
+          "id": "acc-sock-5",
+          "name": "Anti-Slip Low-Cut Sports Socks (Flame Red)",
+          "category": "accessories",
+          "price": 55000,
+          "originalPrice": 80000,
+          "rating": 4.7,
+          "reviewsCount": 62,
+          "image": "/images/soccer_socks/download (4).jpg",
+          "isHot": false,
+          "sizes": ["One Size"]
+        }
+      ]
+    },
+    "benefits": {
+      "title": "WHY CHOOSE ONG BAU SHOP?",
+      "subtitle": "We pride ourselves on offering premium quality gear and top-tier services to football players",
+      "items": [
+        {
+          "id": "ben-1",
+          "title": "100% Authentic Gear",
+          "description": "Authorized dealer of Kamito, Kelme, Wika. We offer a 200% refund check if any fake is discovered.",
+          "icon": "ShieldCheck"
+        },
+        {
+          "id": "ben-2",
+          "title": "Lightning Delivery",
+          "description": "2-hour delivery inside major cities, 1-3 days nationwide shipping with cash-on-delivery checks.",
+          "icon": "Truck"
+        },
+        {
+          "id": "ben-3",
+          "title": "Seamless Exchange",
+          "description": "7-day exchange window for sizing or product changes. Products must remain unworn and boxed.",
+          "icon": "RotateCcw"
+        },
+        {
+          "id": "ben-4",
+          "title": "Reliable Warranty",
+          "description": "Full 90-day glue and stitching warranty on all football boots purchased from Ong Bau Shop.",
+          "icon": "Award"
+        }
+      ]
+    },
+    "promo": {
+      "title": "MEMBER PROMO - FIERY SUMMER SAVINGS",
+      "description": "Grab the coveted Kamito Cobra Pro boots now with an exclusive member discount of up to 30%. Supply is strictly limited to the first 100 registrations.",
+      "highlightText": "Save 30% Today + Receive a Free Pair of Premium Anti-Slip Grip Socks",
+      "discountCode": "ONGBAU30",
+      "ctaText": "REDEEM YOUR SAVINGS NOW",
+      "ctaHref": "#lead-form",
+      "image": "/images/overview/562162745_723586010734835_2162876265339829697_n.jpg",
+      "endsInSeconds": 86400
+    },
+    "testimonials": {
+      "title": "WHAT OUR ATHLETES SAY",
+      "subtitle": "Trusted and worn by over 10,000+ local players and professional athletes",
+      "items": [
+        {
+          "id": "test-1",
+          "name": "Nguyen Hoang Duc",
+          "role": "Vietnam National Team Midfielder",
+          "avatar": "/images/soccer_clothes/Kelme/678511626_874304505662984_3398711367839331974_n.jpg",
+          "comment": "Kamito boots offer a perfect fit for wide feet and excellent grip. The Kelme training shirts are incredibly breathable, keeping me fresh during matches.",
+          "rating": 5,
+          "verified": true
+        },
+        {
+          "id": "test-2",
+          "name": "Tran Van Huy",
+          "role": "Amateur Footballer - FC Huu Nghi",
+          "avatar": "/images/Football_boots/540335540_684387347988035_2073900630704714946_n.jpg",
+          "comment": "Ong Bau Shop has outstanding customer support. They helped me pick the exact size for my Wika boots. Fast delivery, high quality, highly recommended!",
+          "rating": 5,
+          "verified": true
+        },
+        {
+          "id": "test-3",
+          "name": "Le Minh Tuan",
+          "role": "Team Captain - FC Bach Khoa",
+          "avatar": "/images/soccer_clothes/kira/690645508_885177404575694_7090540849557345049_n.jpg",
+          "comment": "We ordered customized jerseys for our team of 30. The printing was sharp, colors were vibrant, and the fabric was lightweight. Everyone loved them.",
+          "rating": 5,
+          "verified": true
+        }
+      ]
+    },
+    "faq": [
+      {
+        "question": "Are all products at Ong Bau Shop authentic?",
+        "answer": "Yes, we guarantee 100% authenticity. All products are sourced directly from official brands like Kamito, Kelme, Wika. If you discover a counterfeit, we promise a 200% monetary compensation."
+      },
+      {
+        "question": "Can I exchange my cleats if they do not fit?",
+        "answer": "Absolutely. We support sizing exchanges within 7 days of receipt, provided the cleats have not been worn on the field and are returned with the original tags and packaging intact."
+      },
+      {
+        "question": "Do you offer same-day delivery?",
+        "answer": "Yes, we do. For orders inside Hanoi and Ho Chi Minh City, we offer express 2-hour shipping using courier services like Grab and Ahamove. Rest-of-country deliveries take 1-3 business days."
+      },
+      {
+        "question": "What is the warranty policy on cleats?",
+        "answer": "All football cleats purchased from us are backed by a 90-day warranty covering glue failure and outsole stitching. We will repair your cleats free of charge in case of any issues."
+      }
+    ],
+    "cta": {
+      "title": "ELEVATE YOUR GAME TO THE PRO LEVEL",
+      "description": "Do not let low-quality gear hold back your passion. Connect with our experts today to receive custom recommendations and an instant 30% discount code.",
+      "ctaText": "GET EXPERT CONSULTATION",
+      "ctaHref": "#lead-form"
+    }
+  }
+}

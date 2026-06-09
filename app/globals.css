@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 15% 4%; /* Dark charcoal background */
+    --foreground: 0 0% 98%;
+
+    --card: 30 12% 8%; /* Premium dark grey card background */
+    --card-foreground: 0 0% 98%;
+
+    --popover: 30 15% 4%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 47 100% 53%; /* #FFC20E - Iconic Ông Bầu Yellow Gold */
+    --primary-foreground: 30 15% 4%;
+
+    --secondary: 30 8% 14%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 30 8% 14%;
+    --muted-foreground: 30 5% 65%;
+
+    --accent: 47 100% 53%;
+    --accent-foreground: 30 15% 4%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 30 8% 16%;
+    --input: 30 8% 16%;
+    --ring: 47 100% 53%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-feature-settings: "rlig" 1, "calt" 1;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Visual Effects & Gradients */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #FFF59D 0%, #FFC20E 50%, #FF8F00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-white {
+  background: linear-gradient(180deg, #FFFFFF 0%, #B3B3B3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #FFE082 0%, #FFC20E 50%, #FF8F00 100%);
+}
+
+.bg-dark-gradient {
+  background: linear-gradient(180deg, #1C1610 0%, #0A0806 100%);
+}
+
+.glass-panel {
+  background: rgba(22, 17, 12, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 194, 14, 0.1);
+}
+
+.glass-card-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-card-hover:hover {
+  background: rgba(30, 24, 18, 0.9);
+  border-color: rgba(255, 194, 14, 0.3);
+  box-shadow: 0 15px 40px -15px rgba(255, 194, 14, 0.2);
+  transform: translateY(-4px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 194, 14, 0.2);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 194, 14, 0.4);
+}
