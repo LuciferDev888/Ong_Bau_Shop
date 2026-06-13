@@ -9,6 +9,7 @@ import PromoSection from "@/components/sections/PromoSection"
 import TestimonialsSection from "@/components/sections/TestimonialsSection"
 import LeadFormSection from "@/components/sections/LeadFormSection"
 import FAQSection from "@/components/sections/FAQSection"
+import StoreLocationSection from "@/components/sections/StoreLocationSection"
 import CTAFooterSection from "@/components/sections/CTAFooterSection"
 import { getLandingPageContent } from "@/lib/content"
 
@@ -70,14 +71,17 @@ export default async function LandingPage({
       {/* Testimonials social proof */}
       <TestimonialsSection vi={content.vi.testimonials} en={content.en.testimonials} />
 
+      {/* FAQ Accordion */}
+      <FAQSection vi={content.vi.faq} en={content.en.faq} />
+
+      {/* Store Location Section */}
+      <StoreLocationSection />
+
       {/* Lead registration form wrapper */}
       <LeadFormSection
         campaignName={content.vi.campaignName}
         products={content.vi.products.items}
       />
-
-      {/* FAQ Accordion */}
-      <FAQSection vi={content.vi.faq} en={content.en.faq} />
 
       {/* CTA Footer right above layout footer */}
       <CTAFooterSection vi={content.vi.cta} en={content.en.cta} />

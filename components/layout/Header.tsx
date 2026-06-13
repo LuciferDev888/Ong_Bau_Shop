@@ -1,65 +1,107 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import Image from "next/image"
-import { Menu, X, ShoppingCart, Search, Globe } from "lucide-react"
+import { Menu, X, ShoppingBag, Globe } from "lucide-react"
 import { trackCTAClick } from "@/lib/analytics"
 import { useLanguage } from "@/hooks/useLanguage"
+
+const SECTION_IDS = [
+  "home",
+  "categories",
+  "spotlight",
+  "products",
+  "benefits",
+  "testimonials",
+  "faq",
+  "location",
+  "lead-form",
+  "contact",
+]
 
 export function Header() {
   const { locale, setLocale } = useLanguage()
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [activeSection, setActiveSection] = useState("home")
 
+  const isVi = locale === "vi"
+
+  // Scroll detection
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setScrolled(true)
-      } else {
-        setScrolled(false)
-      }
+      setScrolled(window.scrollY > 30)
     }
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const handleNavClick = (label: string, href: string) => {
-    trackCTAClick(`nav_${label}_${href}`, "header")
-    setIsOpen(false)
-  }
+  // Active section tracking via IntersectionObserver
+  useEffect(() => {
+    const observers: IntersectionObserver[] = []
+
+    SECTION_IDS.forEach((id) => {
+      const el = document.getElementById(id)
+      if (!el) return
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setActiveSection(id)
+            }
+          })
+        },
+        { threshold: 0.3, rootMargin: "-80px 0px -50% 0px" }
+      )
+
+      observer.observe(el)
+      observers.push(observer)
+    })
+
+    return () => observers.forEach((obs) => obs.disconnect())
+  }, [])
+
+  const handleNavClick = useCallback(
+    (label: string, href: string) => {
+      trackCTAClick(`nav_${label}_${href}`, "header")
+      setIsOpen(false)
+    },
+    []
+  )
 
   const handleLanguageChange = (newLocale: "vi" | "en") => {
     setLocale(newLocale)
     trackCTAClick(`switch_lang_${newLocale}`, "header")
   }
 
-  const isVi = locale === "vi"
-
   const menuItems = isVi
     ? [
-        { label: "Trang Chủ", href: "#" },
-        { label: "Danh Mục", href: "#categories" },
-        { label: "Chủ Lực", href: "#spotlight" },
-        { label: "Sản Phẩm", href: "#products" },
-        { label: "Khuyến Mãi", href: "#promo" },
-        { label: "Đánh Giá", href: "#testimonials" },
-        { label: "Hỏi Đáp", href: "#faq" },
+        { label: "TRANG CHỦ", href: "#home" },
+        { label: "BỘ SƯU TẬP", href: "#categories" },
+        { label: "CHỦ LỰC", href: "#spotlight" },
+        { label: "SẢN PHẨM", href: "#products" },
+        { label: "VỀ CHÚNG TÔI", href: "#benefits" },
+        { label: "ĐÁNH GIÁ", href: "#testimonials" },
+        { label: "HỎI ĐÁP", href: "#faq" },
+        { label: "LIÊN HỆ", href: "#location" },
       ]
     : [
-        { label: "Home", href: "#" },
-        { label: "Categories", href: "#categories" },
-        { label: "Spotlight", href: "#spotlight" },
-        { label: "Catalog", href: "#products" },
-        { label: "Promo", href: "#promo" },
-        { label: "Reviews", href: "#testimonials" },
+        { label: "HOME", href: "#home" },
+        { label: "COLLECTION", href: "#categories" },
+        { label: "SPOTLIGHT", href: "#spotlight" },
+        { label: "PRODUCTS", href: "#products" },
+        { label: "WHY US", href: "#benefits" },
+        { label: "REVIEWS", href: "#testimonials" },
         { label: "FAQ", href: "#faq" },
+        { label: "CONTACT", href: "#location" },
       ]
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-background/90 backdrop-blur-md border-b border-border py-3"
+          ? "bg-background/85 backdrop-blur-xl border-b border-border/60 py-3"
           : "bg-transparent py-5"
       }`}
     >
@@ -67,11 +109,11 @@ export function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a
-            href="#"
+            href="#home"
             className="flex items-center gap-3 group"
-            onClick={() => handleNavClick("logo", "#")}
+            onClick={() => handleNavClick("logo", "#home")}
           >
-            <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-primary">
+            <div className="relative w-9 h-9 rounded-full overflow-hidden border border-primary/40 group-hover:border-primary transition-colors">
               <Image
                 src="/images/Logo/logo.jpg"
                 alt="Ông Bầu Shop Logo"
@@ -80,96 +122,99 @@ export function Header() {
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-base sm:text-lg font-black tracking-wider text-gradient-gold group-hover:opacity-95 transition-opacity leading-none">
-                ÔNG BẦU SHOP
+              <span className="text-sm sm:text-base font-black tracking-editorial text-gradient-gold leading-none">
+                ÔNG BẦU
               </span>
-              <span className="text-[9px] font-bold text-muted-foreground uppercase tracking-widest leading-none mt-1">
-                {isVi ? "TRANG BỊ BÓNG ĐÁ CHUYÊN NGHIỆP" : "PROFESSIONAL SOCCER GEAR"}
+              <span className="text-[8px] font-bold text-muted-foreground uppercase tracking-editorial-wide leading-none mt-0.5">
+                {isVi ? "FOOTBALL GEAR" : "FOOTBALL GEAR"}
               </span>
             </div>
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden xl:flex space-x-6">
-            {menuItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="text-xs sm:text-sm font-semibold text-foreground/80 hover:text-primary transition-colors"
-                onClick={() => handleNavClick(item.label, item.href)}
-              >
-                {item.label}
-              </a>
-            ))}
+          <nav className="hidden xl:flex items-center gap-1" aria-label="Main navigation">
+            {menuItems.map((item) => {
+              const sectionId = item.href.replace("#", "")
+              const isActive = activeSection === sectionId
+              return (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className={`relative px-3 py-2 text-[11px] font-bold tracking-editorial transition-colors duration-300 ${
+                    isActive
+                      ? "text-primary"
+                      : "text-foreground/60 hover:text-foreground"
+                  }`}
+                  onClick={() => handleNavClick(item.label, item.href)}
+                >
+                  {item.label}
+                  {/* Active underline */}
+                  <span
+                    className={`absolute bottom-0 left-3 right-3 h-[2px] bg-primary transition-transform duration-300 origin-left ${
+                      isActive ? "scale-x-100" : "scale-x-0"
+                    }`}
+                  />
+                </a>
+              )
+            })}
           </nav>
 
-          {/* Actions */}
-          <div className="hidden lg:flex items-center space-x-4">
-            {/* Language Switcher Flag Trigger */}
-            <div className="flex items-center bg-secondary/80 border border-border/80 rounded-lg p-1 text-xs font-bold font-mono">
+          {/* Right Actions */}
+          <div className="hidden lg:flex items-center gap-3">
+            {/* Language Switcher */}
+            <div className="flex items-center border border-border/60 rounded-md overflow-hidden text-[10px] font-bold tracking-wider">
               <button
                 onClick={() => handleLanguageChange("vi")}
-                className={`px-2 py-1.5 rounded transition-all ${
-                  isVi ? "bg-primary text-primary-foreground shadow" : "text-foreground/60 hover:text-foreground"
+                className={`px-2.5 py-1.5 transition-all duration-300 ${
+                  isVi
+                    ? "bg-primary text-primary-foreground"
+                    : "text-foreground/50 hover:text-foreground bg-transparent"
                 }`}
+                aria-label="Vietnamese"
               >
                 VI
               </button>
               <button
                 onClick={() => handleLanguageChange("en")}
-                className={`px-2 py-1.5 rounded transition-all ${
-                  !isVi ? "bg-primary text-primary-foreground shadow" : "text-foreground/60 hover:text-foreground"
+                className={`px-2.5 py-1.5 transition-all duration-300 ${
+                  !isVi
+                    ? "bg-primary text-primary-foreground"
+                    : "text-foreground/50 hover:text-foreground bg-transparent"
                 }`}
+                aria-label="English"
               >
                 EN
               </button>
             </div>
 
-            <button
-              aria-label="Search products"
-              className="p-2 text-foreground/80 hover:text-primary transition-colors"
-              onClick={() => trackCTAClick("search_icon", "header")}
-            >
-              <Search className="w-5 h-5" />
-            </button>
+            {/* Shop Now CTA */}
             <a
               href="#products"
-              className="p-2 text-foreground/80 hover:text-primary relative transition-colors"
-              onClick={() => handleNavClick("cart", "#products")}
+              className="btn-primary-gold !py-2 !px-5 !text-[10px] !tracking-editorial"
+              onClick={() => handleNavClick("cta_shop", "#products")}
             >
-              <ShoppingCart className="w-5 h-5" />
-              <span className="absolute -top-1 -right-1 w-4 h-4 bg-primary text-primary-foreground text-[10px] font-bold rounded-full flex items-center justify-center">
-                0
-              </span>
-            </a>
-            <a
-              href="#lead-form"
-              className="bg-primary hover:bg-primary/95 text-primary-foreground text-xs sm:text-sm font-bold px-4 py-2.5 rounded-lg transition-all transform active:scale-95 shadow-lg shadow-primary/20"
-              onClick={() => handleNavClick("cta_consult", "#lead-form")}
-            >
-              {isVi ? "Tư Vấn Ngay" : "Consult Now"}
+              <ShoppingBag className="w-3.5 h-3.5" />
+              <span>{isVi ? "MUA NGAY" : "SHOP NOW"}</span>
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="flex xl:hidden items-center space-x-3">
+          {/* Mobile actions */}
+          <div className="flex xl:hidden items-center gap-2">
             <a
               href="#products"
-              className="p-2 text-foreground/80 hover:text-primary relative"
+              className="p-2 text-foreground/70 hover:text-primary relative transition-colors"
               onClick={() => handleNavClick("cart_mobile", "#products")}
+              aria-label="Shop products"
             >
-              <ShoppingCart className="w-5 h-5" />
-              <span className="absolute -top-1 -right-1 w-4 h-4 bg-primary text-primary-foreground text-[10px] font-bold rounded-full flex items-center justify-center">
-                0
-              </span>
+              <ShoppingBag className="w-5 h-5" />
             </a>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg text-foreground hover:text-primary focus:outline-none"
+              className="p-2 rounded-md text-foreground hover:text-primary focus:outline-none transition-colors"
               aria-expanded={isOpen}
               aria-label="Toggle main menu"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
         </div>
@@ -177,44 +222,56 @@ export function Header() {
 
       {/* Mobile Drawer */}
       <div
-        className={`xl:hidden fixed inset-x-0 top-[73px] bg-background/95 backdrop-blur-lg border-b border-border transition-all duration-300 ease-in-out ${
+        className={`xl:hidden fixed inset-x-0 top-[65px] bg-background/95 backdrop-blur-xl border-b border-border transition-all duration-400 ease-out ${
           isOpen
             ? "opacity-100 translate-y-0 pointer-events-auto"
             : "opacity-0 -translate-y-4 pointer-events-none"
         }`}
       >
-        <div className="px-4 pt-2 pb-6 space-y-3">
-          {menuItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className="block px-3 py-2.5 rounded-md text-base font-semibold text-foreground/90 hover:bg-secondary hover:text-primary transition-all"
-              onClick={() => handleNavClick(item.label, item.href)}
-            >
-              {item.label}
-            </a>
-          ))}
-          
-          <div className="pt-4 border-t border-border flex flex-col gap-3">
-            {/* Language Selection Row in Mobile */}
-            <div className="flex items-center justify-between px-3">
-              <span className="text-sm font-semibold text-muted-foreground flex items-center gap-2">
-                <Globe className="w-4 h-4" />
-                Language
+        <div className="px-6 pt-4 pb-8 space-y-1 max-h-[calc(100vh-80px)] overflow-y-auto">
+          {menuItems.map((item) => {
+            const sectionId = item.href.replace("#", "")
+            const isActive = activeSection === sectionId
+            return (
+              <a
+                key={item.label}
+                href={item.href}
+                className={`block px-4 py-3 text-sm font-bold tracking-editorial transition-all rounded-md ${
+                  isActive
+                    ? "text-primary bg-primary/5"
+                    : "text-foreground/70 hover:text-foreground hover:bg-secondary/40"
+                }`}
+                onClick={() => handleNavClick(item.label, item.href)}
+              >
+                {item.label}
+              </a>
+            )
+          })}
+
+          <div className="pt-6 border-t border-border/40 flex flex-col gap-4">
+            {/* Mobile Language Switcher */}
+            <div className="flex items-center justify-between px-4">
+              <span className="text-xs font-semibold text-muted-foreground flex items-center gap-2 tracking-wider uppercase">
+                <Globe className="w-3.5 h-3.5" />
+                {isVi ? "Ngôn ngữ" : "Language"}
               </span>
-              <div className="flex bg-secondary border border-border rounded-lg p-1 text-xs font-bold font-mono">
+              <div className="flex border border-border/60 rounded-md overflow-hidden text-[10px] font-bold tracking-wider">
                 <button
                   onClick={() => handleLanguageChange("vi")}
-                  className={`px-3 py-1.5 rounded transition-all ${
-                    isVi ? "bg-primary text-primary-foreground shadow" : "text-foreground/60"
+                  className={`px-3 py-1.5 transition-all ${
+                    isVi
+                      ? "bg-primary text-primary-foreground"
+                      : "text-foreground/50"
                   }`}
                 >
                   VI
                 </button>
                 <button
                   onClick={() => handleLanguageChange("en")}
-                  className={`px-3 py-1.5 rounded transition-all ${
-                    !isVi ? "bg-primary text-primary-foreground shadow" : "text-foreground/60"
+                  className={`px-3 py-1.5 transition-all ${
+                    !isVi
+                      ? "bg-primary text-primary-foreground"
+                      : "text-foreground/50"
                   }`}
                 >
                   EN
@@ -223,11 +280,12 @@ export function Header() {
             </div>
 
             <a
-              href="#lead-form"
-              className="w-full text-center bg-primary hover:bg-primary/95 text-primary-foreground font-bold py-3 rounded-lg transition-colors shadow-lg shadow-primary/20"
-              onClick={() => handleNavClick("cta_consult_mobile", "#lead-form")}
+              href="#products"
+              className="btn-primary-gold w-full !text-xs"
+              onClick={() => handleNavClick("cta_shop_mobile", "#products")}
             >
-              {isVi ? "Tư Vấn Ngay" : "Consult Now"}
+              <ShoppingBag className="w-4 h-4" />
+              <span>{isVi ? "MUA NGAY" : "SHOP NOW"}</span>
             </a>
           </div>
         </div>

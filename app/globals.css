@@ -2,25 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ================================================================
+   DESIGN SYSTEM — ÔNG BẦU SHOP PREMIUM EDITORIAL
+   Inspired by luxury sports brand aesthetics
+   60% Dark Base / 30% Neutral / 10% Gold Accent
+   ================================================================ */
+
 @layer base {
   :root {
-    --background: 30 15% 4%; /* Dark charcoal background */
-    --foreground: 0 0% 98%;
+    --background: 30 15% 4%;       /* #0F0C0A — near-black charcoal */
+    --foreground: 0 0% 96%;        /* #F5F5F5 */
 
-    --card: 30 12% 8%; /* Premium dark grey card background */
-    --card-foreground: 0 0% 98%;
+    --card: 30 12% 7%;             /* Dark card surface */
+    --card-foreground: 0 0% 96%;
 
     --popover: 30 15% 4%;
-    --popover-foreground: 0 0% 98%;
+    --popover-foreground: 0 0% 96%;
 
-    --primary: 47 100% 53%; /* #FFC20E - Iconic Ông Bầu Yellow Gold */
+    --primary: 47 100% 53%;        /* #FFC20E — Ông Bầu Gold */
     --primary-foreground: 30 15% 4%;
 
-    --secondary: 30 8% 14%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 30 8% 12%;
+    --secondary-foreground: 0 0% 96%;
 
-    --muted: 30 8% 14%;
-    --muted-foreground: 30 5% 65%;
+    --muted: 30 6% 16%;
+    --muted-foreground: 30 5% 55%;
 
     --accent: 47 100% 53%;
     --accent-foreground: 30 15% 4%;
@@ -28,11 +34,15 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 30 8% 16%;
-    --input: 30 8% 16%;
+    --border: 30 8% 14%;
+    --input: 30 8% 14%;
     --ring: 47 100% 53%;
 
     --radius: 0.75rem;
+
+    /* Editorial spacing */
+    --section-py: clamp(5rem, 8vw, 8rem);
+    --container-px: clamp(1rem, 4vw, 2rem);
   }
 }
 
@@ -51,57 +61,555 @@
   }
 }
 
-/* Custom Visual Effects & Gradients */
+/* ================================================================
+   TYPOGRAPHY GRADIENTS
+   ================================================================ */
 .text-gradient-gold {
-  background: linear-gradient(135deg, #FFF59D 0%, #FFC20E 50%, #FF8F00 100%);
+  background: linear-gradient(135deg, #FFF59D 0%, #FFC20E 45%, #FF8F00 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .text-gradient-white {
-  background: linear-gradient(180deg, #FFFFFF 0%, #B3B3B3 100%);
+  background: linear-gradient(180deg, #FFFFFF 0%, #C0C0C0 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
+/* ================================================================
+   BACKGROUND UTILITIES
+   ================================================================ */
 .bg-gold-gradient {
   background: linear-gradient(135deg, #FFE082 0%, #FFC20E 50%, #FF8F00 100%);
 }
 
 .bg-dark-gradient {
-  background: linear-gradient(180deg, #1C1610 0%, #0A0806 100%);
+  background: linear-gradient(180deg, hsl(30 15% 5%) 0%, hsl(30 15% 3%) 100%);
 }
 
+.bg-dark-gradient-reverse {
+  background: linear-gradient(180deg, hsl(30 15% 3%) 0%, hsl(30 15% 5%) 100%);
+}
+
+/* ================================================================
+   GLASS PANELS & CARDS
+   ================================================================ */
 .glass-panel {
-  background: rgba(22, 17, 12, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 194, 14, 0.1);
+  background: rgba(18, 14, 10, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 194, 14, 0.08);
 }
 
 .glass-card-hover {
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .glass-card-hover:hover {
-  background: rgba(30, 24, 18, 0.9);
-  border-color: rgba(255, 194, 14, 0.3);
-  box-shadow: 0 15px 40px -15px rgba(255, 194, 14, 0.2);
-  transform: translateY(-4px);
+  background: rgba(26, 21, 16, 0.9);
+  border-color: rgba(255, 194, 14, 0.25);
+  box-shadow:
+    0 20px 50px -15px rgba(255, 194, 14, 0.15),
+    0 0 0 1px rgba(255, 194, 14, 0.08);
+  transform: translateY(-6px);
 }
 
-/* Custom Scrollbar */
+/* ================================================================
+   EDITORIAL SECTION NUMBERING
+   Micro-labels like: 01 / ELITE FOOTBALL GEAR
+   ================================================================ */
+.section-number {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: hsl(var(--primary));
+  margin-bottom: 1.25rem;
+}
+.section-number::before {
+  content: '';
+  display: inline-block;
+  width: 2rem;
+  height: 1px;
+  background: hsl(var(--primary) / 0.4);
+}
+.section-number .num {
+  font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: hsl(var(--primary));
+  opacity: 0.8;
+}
+
+/* ================================================================
+   DECORATIVE LINES & DIVIDERS
+   ================================================================ */
+.decorative-line-h {
+  width: 4rem;
+  height: 1px;
+  background: linear-gradient(90deg, hsl(var(--primary)) 0%, transparent 100%);
+}
+
+.decorative-line-v {
+  width: 1px;
+  height: 4rem;
+  background: linear-gradient(180deg, hsl(var(--primary) / 0.6) 0%, transparent 100%);
+}
+
+.section-divider-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, hsl(var(--border)) 30%, hsl(var(--border)) 70%, transparent);
+}
+
+/* ================================================================
+   FOOTBALL PITCH-LINE PATTERN BACKGROUND
+   ================================================================ */
+.pitch-pattern {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image:
+    linear-gradient(rgba(255, 194, 14, 0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 194, 14, 0.5) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+}
+
+/* ================================================================
+   AMBIENT GLOW ORBS
+   ================================================================ */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(120px);
+}
+.glow-orb-gold {
+  background: radial-gradient(circle, rgba(255, 194, 14, 0.12) 0%, transparent 70%);
+}
+.glow-orb-warm {
+  background: radial-gradient(circle, rgba(255, 143, 0, 0.08) 0%, transparent 70%);
+}
+
+/* ================================================================
+   SCROLL REVEAL ANIMATION SYSTEM
+   ================================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px) scale(0.98);
+  filter: blur(8px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-28px) scale(0.98);
+  filter: blur(8px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-right {
+  opacity: 0;
+  transform: translateX(28px) scale(0.98);
+  filter: blur(8px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.reveal-visible,
+.reveal.is-visible {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+  filter: blur(0) !important;
+}
+.reveal-left.reveal-visible,
+.reveal-left.is-visible {
+  opacity: 1 !important;
+  transform: translateX(0) scale(1) !important;
+  filter: blur(0) !important;
+}
+.reveal-right.reveal-visible,
+.reveal-right.is-visible {
+  opacity: 1 !important;
+  transform: translateX(0) scale(1) !important;
+  filter: blur(0) !important;
+}
+
+/* Stagger delays for children */
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+.reveal-delay-6 { transition-delay: 0.6s; }
+
+/* ================================================================
+   BUTTON STYLES
+   ================================================================ */
+.btn-primary-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #FFE082 0%, #FFC20E 50%, #FF8F00 100%);
+  color: hsl(var(--primary-foreground));
+  border-radius: 0.75rem;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow:
+    0 8px 30px -8px rgba(255, 194, 14, 0.4),
+    0 0 0 0 rgba(255, 194, 14, 0);
+}
+.btn-primary-gold:hover {
+  box-shadow:
+    0 12px 40px -8px rgba(255, 194, 14, 0.5),
+    0 0 0 2px rgba(255, 194, 14, 0.15);
+  transform: translateY(-2px);
+}
+.btn-primary-gold:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.btn-outline-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  font-weight: 600;
+  font-size: 0.8125rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: transparent;
+  color: hsl(var(--foreground));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-outline-light:hover {
+  border-color: hsl(var(--primary) / 0.5);
+  background: hsl(var(--primary) / 0.05);
+  color: hsl(var(--primary));
+  transform: translateY(-2px);
+}
+
+/* ================================================================
+   SCROLL INDICATOR
+   ================================================================ */
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.scroll-indicator-text {
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: hsl(var(--muted-foreground));
+}
+.scroll-indicator-line {
+  width: 1px;
+  height: 3rem;
+  background: linear-gradient(180deg, hsl(var(--primary) / 0.6) 0%, transparent 100%);
+  position: relative;
+  overflow: hidden;
+}
+.scroll-indicator-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: hsl(var(--primary));
+  border-radius: 4px;
+  animation: scrollDot 2s ease-in-out infinite;
+}
+
+@keyframes scrollDot {
+  0%, 100% { top: 0; opacity: 1; }
+  50% { top: calc(100% - 8px); opacity: 0.3; }
+}
+
+/* ================================================================
+   FLOATING ANIMATION
+   ================================================================ */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+/* Glow pulse for ambient orbs in hero */
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.08); }
+}
+.animate-glow-pulse {
+  animation: glowPulse 4s ease-in-out infinite;
+}
+
+/* ================================================================
+   CUSTOM SCROLLBAR
+   ================================================================ */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
   background: hsl(var(--background));
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 194, 14, 0.2);
-  border-radius: 4px;
+  background: rgba(255, 194, 14, 0.15);
+  border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 194, 14, 0.4);
+  background: rgba(255, 194, 14, 0.35);
 }
+
+/* ================================================================
+   ACCESSIBILITY — Respect reduced motion preferences
+   ================================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal,
+  .reveal-left,
+  .reveal-right {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .animate-float-sparkle {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ================================================================
+   SPARKLE FLOAT ANIMATION
+   ================================================================ */
+.animate-float-sparkle {
+  animation-name: floatSparkle;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes floatSparkle {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.8);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-160px) translateX(30px) scale(0.6);
+    opacity: 0;
+  }
+}
+
+/* ================================================================
+   SECTION 04 STAGGERED REVEAL ANIMATIONS
+   Premium cinematic panel transition with layered child stagger
+   ================================================================ */
+
+/* Container: deep blur+slide entrance, whole panel fades in together */
+.product-detail-animate {
+  animation: productPanelReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes productPanelReveal {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.97);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* Child items: each reveals with its own slide+blur, staggered by delay classes */
+.product-detail-item {
+  opacity: 0;
+  animation: detailChildReveal 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes detailChildReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px) translateX(-6px);
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+    filter: blur(0);
+  }
+}
+
+/* Stagger timing: spreads 0.05s – 0.60s for layered, cinematic feel */
+.product-detail-delay-1 { animation-delay: 0.08s; }
+.product-detail-delay-2 { animation-delay: 0.16s; }
+.product-detail-delay-3 { animation-delay: 0.24s; }
+.product-detail-delay-4 { animation-delay: 0.32s; }
+.product-detail-delay-5 { animation-delay: 0.40s; }
+.product-detail-delay-6 { animation-delay: 0.50s; }
+.product-detail-delay-7 { animation-delay: 0.60s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .product-detail-animate {
+    opacity: 1 !important;
+    animation: none !important;
+    transform: none !important;
+    filter: none !important;
+  }
+  .product-detail-item {
+    opacity: 1 !important;
+    animation: none !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}
+
+/* ================================================================
+   RESPONSIVE SECTION SPACING ON MOBILE (48px - 72px)
+   ================================================================ */
+@media (max-width: 767px) {
+  #categories,
+  #spotlight,
+  #products,
+  #benefits,
+  #testimonials,
+  #faq,
+  #location,
+  #lead-form,
+  #contact {
+    padding-top: 3.5rem !important;    /* 56px */
+    padding-bottom: 3.5rem !important; /* 56px */
+  }
+}
+
+/* ================================================================
+   TYPING CURSOR & MARQUEE & FLOAT GENTLE ANIMATIONS
+   ================================================================ */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.animate-blink {
+  animation: blink 0.8s infinite;
+}
+
+@keyframes float-gentle-1 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(0.4deg); }
+}
+@keyframes float-gentle-2 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-5px) translateX(3px) rotate(-0.3deg); }
+}
+@keyframes float-gentle-3 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-7px) translateX(-2px) rotate(0.2deg); }
+}
+@keyframes float-gentle-4 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-4px) rotate(-0.2deg); }
+}
+
+.animate-float-gentle-1 {
+  animation: float-gentle-1 5s ease-in-out infinite;
+}
+.animate-float-gentle-2 {
+  animation: float-gentle-2 6s ease-in-out infinite;
+}
+.animate-float-gentle-3 {
+  animation: float-gentle-3 7s ease-in-out infinite;
+}
+.animate-float-gentle-4 {
+  animation: float-gentle-4 5.5s ease-in-out infinite;
+}
+
+/* Hover state stabilization */
+.hover-stabilize:hover {
+  animation-play-state: paused !important;
+  transform: translateY(-10px) scale(1.02) !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s, background-color 0.35s !important;
+  box-shadow: 0 10px 25px -5px rgba(255, 194, 14, 0.1), 0 8px 10px -6px rgba(255, 194, 14, 0.1) !important;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-blink {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+  .animate-float-gentle-1,
+  .animate-float-gentle-2,
+  .animate-float-gentle-3,
+  .animate-float-gentle-4 {
+    animation: none !important;
+    transform: none !important;
+  }
+  .animate-marquee {
+    animation: none !important;
+    overflow-x: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+

@@ -15,14 +15,14 @@ export function Footer() {
   const isVi = locale === "vi"
 
   return (
-    <footer className="bg-dark-gradient border-t border-border pt-16 pb-8">
+    <footer className="bg-dark-gradient border-t border-border/10 pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-16">
           
           {/* Brand Info */}
-          <div className="md:col-span-1">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-primary">
+          <div className="md:col-span-1 space-y-5">
+            <div className="flex items-center gap-3">
+              <div className="relative w-9 h-9 rounded-full overflow-hidden border border-primary/40">
                 <Image
                   src="/images/Logo/logo.jpg"
                   alt="Ông Bầu Shop Logo"
@@ -30,25 +30,32 @@ export function Footer() {
                   className="object-cover"
                 />
               </div>
-              <span className="text-xl font-bold tracking-wider text-gradient-gold">
-                ÔNG BẦU SHOP
-              </span>
+              <div className="flex flex-col">
+                <span className="text-sm font-black tracking-editorial text-gradient-gold leading-none">
+                  ÔNG BẦU SHOP
+                </span>
+                <span className="text-[8px] font-bold text-muted-foreground uppercase tracking-editorial-wide leading-none mt-0.5">
+                  FOOTBALL GEAR
+                </span>
+              </div>
             </div>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+            
+            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
               {isVi
                 ? "Hệ thống bán lẻ giày bóng đá, quần áo đấu và phụ kiện thể thao chính hãng. Đồng hành cùng niềm đam mê sân cỏ của hàng triệu cầu thủ Việt."
                 : "Official retail network for soccer cleats, club jerseys, and athletic training gear. Fueling the pitch passion of millions of Vietnamese footballers."}
             </p>
-            <div className="flex gap-4">
+            
+            <div className="flex gap-3 pt-1">
               <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noreferrer"
-                className="w-10 h-10 rounded-full bg-secondary border border-border flex items-center justify-center text-foreground/80 hover:text-primary hover:border-primary transition-all"
+                className="w-9 h-9 rounded-full bg-secondary/60 border border-border/30 flex items-center justify-center text-foreground/80 hover:text-primary hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300"
                 onClick={() => handleLinkClick("facebook", "https://facebook.com")}
                 aria-label="Facebook link"
               >
-                <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
                   <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.8c4.56-.93 8-4.96 8-9.8z" />
                 </svg>
               </a>
@@ -56,36 +63,36 @@ export function Footer() {
                 href="https://youtube.com"
                 target="_blank"
                 rel="noreferrer"
-                className="w-10 h-10 rounded-full bg-secondary border border-border flex items-center justify-center text-foreground/80 hover:text-primary hover:border-primary transition-all"
+                className="w-9 h-9 rounded-full bg-secondary/60 border border-border/30 flex items-center justify-center text-foreground/80 hover:text-primary hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300"
                 onClick={() => handleLinkClick("youtube", "https://youtube.com")}
                 aria-label="Youtube link"
               >
-                <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
                   <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                 </svg>
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-secondary border border-border flex items-center justify-center text-foreground/80 hover:text-primary hover:border-primary transition-all"
+                className="w-9 h-9 rounded-full bg-secondary/60 border border-border/30 flex items-center justify-center text-foreground/80 hover:text-primary hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300"
                 onClick={() => handleLinkClick("zalo", "#")}
                 aria-label="Zalo link"
               >
-                <span className="text-xs font-bold font-sans">Zalo</span>
+                <span className="text-[10px] font-bold font-sans">Zalo</span>
               </a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-sm font-semibold tracking-wider text-primary uppercase mb-4">
-              {isVi ? "Về Chúng Tôi" : "About Us"}
+            <h3 className="text-[11px] font-bold tracking-editorial text-primary uppercase mb-5">
+              {isVi ? "VỀ CHÚNG TÔI" : "ABOUT US"}
             </h3>
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#"
-                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  onClick={() => handleLinkClick("home", "#")}
+                  href="#home"
+                  className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                  onClick={() => handleLinkClick("home", "#home")}
                 >
                   {isVi ? "Trang chủ" : "Home"}
                 </a>
@@ -93,7 +100,7 @@ export function Footer() {
               <li>
                 <a
                   href="#categories"
-                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  className="text-xs text-muted-foreground hover:text-foreground transition-colors"
                   onClick={() => handleLinkClick("categories", "#categories")}
                 >
                   {isVi ? "Danh mục sản phẩm" : "Product Categories"}
@@ -102,7 +109,7 @@ export function Footer() {
               <li>
                 <a
                   href="#products"
-                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  className="text-xs text-muted-foreground hover:text-foreground transition-colors"
                   onClick={() => handleLinkClick("products", "#products")}
                 >
                   {isVi ? "Sản phẩm nổi bật" : "Featured Products"}
@@ -111,7 +118,7 @@ export function Footer() {
               <li>
                 <a
                   href="#testimonials"
-                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  className="text-xs text-muted-foreground hover:text-foreground transition-colors"
                   onClick={() => handleLinkClick("reviews", "#testimonials")}
                 >
                   {isVi ? "Đánh giá từ khách hàng" : "Customer Reviews"}
@@ -122,14 +129,14 @@ export function Footer() {
 
           {/* Policy Links */}
           <div>
-            <h3 className="text-sm font-semibold tracking-wider text-primary uppercase mb-4">
-              {isVi ? "Chính Sách Cửa Hàng" : "Store Policies"}
+            <h3 className="text-[11px] font-bold tracking-editorial text-primary uppercase mb-5">
+              {isVi ? "CHÍNH SÁCH CỬA HÀNG" : "STORE POLICIES"}
             </h3>
             <ul className="space-y-3">
               <li>
                 <a
                   href="#faq"
-                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  className="text-xs text-muted-foreground hover:text-foreground transition-colors"
                   onClick={() => handleLinkClick("policy_shipping", "#faq")}
                 >
                   {isVi ? "Giao hàng & Kiểm hàng" : "Shipping & Inspection"}
@@ -138,7 +145,7 @@ export function Footer() {
               <li>
                 <a
                   href="#faq"
-                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  className="text-xs text-muted-foreground hover:text-foreground transition-colors"
                   onClick={() => handleLinkClick("policy_returns", "#faq")}
                 >
                   {isVi ? "Đổi trả sản phẩm trong 7 ngày" : "7-Day Returns & Exchanges"}
@@ -147,7 +154,7 @@ export function Footer() {
               <li>
                 <a
                   href="#faq"
-                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  className="text-xs text-muted-foreground hover:text-foreground transition-colors"
                   onClick={() => handleLinkClick("policy_warranty", "#faq")}
                 >
                   {isVi ? "Chính sách bảo hành giày" : "Cleat Warranty Policy"}
@@ -156,7 +163,7 @@ export function Footer() {
               <li>
                 <a
                   href="#lead-form"
-                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  className="text-xs text-muted-foreground hover:text-foreground transition-colors"
                   onClick={() => handleLinkClick("policy_privacy", "#lead-form")}
                 >
                   {isVi ? "Chính sách bảo mật thông tin" : "Privacy Policy"}
@@ -167,41 +174,41 @@ export function Footer() {
 
           {/* Contact Details */}
           <div>
-            <h3 className="text-sm font-semibold tracking-wider text-primary uppercase mb-4">
-              {isVi ? "Thông Tin Liên Hệ" : "Contact Details"}
+            <h3 className="text-[11px] font-bold tracking-editorial text-primary uppercase mb-5">
+              {isVi ? "THÔNG TIN LIÊN HỆ" : "CONTACT DETAILS"}
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                <span className="text-sm text-muted-foreground leading-relaxed">
+                <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                <span className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                   {isVi
-                    ? "Số 123 Đường Thành Công, Phường 12, Quận Tân Bình, TP. Hồ Chí Minh"
-                    : "123 Thanh Cong Road, Ward 12, Tan Binh District, Ho Chi Minh City"}
+                    ? "Nước Mặn 6, Ngũ Hành Sơn, Đà Nẵng, Việt Nam"
+                    : "Nuoc Man 6, Ngu Hanh Son, Da Nang, Vietnam"}
                 </span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-primary shrink-0" />
+                <Phone className="w-4 h-4 text-primary shrink-0" />
                 <a
-                  href="tel:0901234567"
-                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  onClick={() => handleLinkClick("phone_call", "tel:0901234567")}
+                  href="tel:0906443704"
+                  className="text-xs sm:text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  onClick={() => handleLinkClick("phone_call", "tel:0906443704")}
                 >
-                  090 123 4567
+                  0906 443 704
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-primary shrink-0" />
+                <Mail className="w-4 h-4 text-primary shrink-0" />
                 <a
-                  href="mailto:contact@ongbaushop.com"
-                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  onClick={() => handleLinkClick("email_send", "mailto:contact@ongbaushop.com")}
+                  href="mailto:abc@gmail.com"
+                  className="text-xs sm:text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  onClick={() => handleLinkClick("email_send", "mailto:abc@gmail.com")}
                 >
-                  contact@ongbaushop.com
+                  abc@gmail.com
                 </a>
               </li>
-              <li className="flex items-center gap-2 pt-2">
-                <ShieldCheck className="w-5 h-5 text-green-500" />
-                <span className="text-xs text-muted-foreground font-semibold">
+              <li className="flex items-center gap-2 pt-2 border-t border-border/10">
+                <ShieldCheck className="w-4 h-4 text-green-500" />
+                <span className="text-[10px] text-muted-foreground font-semibold">
                   {isVi ? "Đã thông báo Bộ Công Thương" : "Registered with MoIT"}
                 </span>
               </li>
@@ -209,11 +216,11 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-border/60 pt-8 mt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
-          <p className="text-xs text-muted-foreground">
+        <div className="border-t border-border/10 pt-8 mt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+          <p className="text-[10px] sm:text-xs text-muted-foreground">
             &copy; {new Date().getFullYear()} Ông Bầu Shop. All rights reserved. {isVi ? "Mã số doanh nghiệp: 0317654321 cấp ngày 01/01/2024." : "Business Reg No: 0317654321 dated 01/01/2024."}
           </p>
-          <p className="text-xs text-muted-foreground">
+          <p className="text-[10px] sm:text-xs text-muted-foreground">
             {isVi ? "Thiết kế và phát triển bởi Đội ngũ kỹ thuật Ông Bầu." : "Designed and developed by Ong Bau Dev Team."}
           </p>
         </div>

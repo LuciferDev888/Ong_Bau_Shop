@@ -4,6 +4,7 @@ import Script from "next/script"
 import "./globals.css"
 
 import { LanguageProvider } from "@/components/context/LanguageContext"
+import SparkleParticles from "@/components/effects/SparkleParticles"
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -20,6 +21,11 @@ export const metadata: Metadata = {
   title: "Ông Bầu Shop - Trang Bị Bóng Đá Chính Hãng & Chuyên Nghiệp",
   description:
     "Hệ thống phân phối giày bóng đá, quần áo đấu và phụ kiện thể thao chính hãng. Giao hàng nhanh chóng, cam kết 100% chất lượng.",
+  icons: {
+    icon: "/images/Logo/logo.jpg",
+    shortcut: "/images/Logo/logo.jpg",
+    apple: "/images/Logo/logo.jpg",
+  },
 }
 
 export default function RootLayout({
@@ -57,7 +63,10 @@ export default function RootLayout({
           </Script>
         )}
 
-        <LanguageProvider>{children}</LanguageProvider>
+        <LanguageProvider>
+          {children}
+          <SparkleParticles />
+        </LanguageProvider>
       </body>
     </html>
   )
