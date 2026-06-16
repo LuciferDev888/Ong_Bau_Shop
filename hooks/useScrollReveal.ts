@@ -3,15 +3,10 @@
 import { useEffect, useRef } from "react"
 
 /**
- * useScrollReveal — Lightweight IntersectionObserver-based scroll reveal
+ * Lightweight IntersectionObserver-based scroll reveal.
  *
- * Adds `.reveal-visible` class when elements with `.reveal`, `.reveal-left`,
- * or `.reveal-right` classes enter the viewport.
- *
- * Supports `data-stagger` attribute on a parent element to auto-apply
- * staggered transition-delays to its `.reveal` children.
- *
- * Respects prefers-reduced-motion by immediately showing all elements.
+ * Adds `.reveal-visible` when reveal elements enter the viewport, supports
+ * `data-stagger`, and observes dynamic children such as filtered product cards.
  */
 export function useScrollReveal() {
   const containerRef = useRef<HTMLElement>(null)
@@ -20,40 +15,51 @@ export function useScrollReveal() {
     const container = containerRef.current
     if (!container) return
 
-    // Respect reduced motion preference
+    const revealSelector = ".reveal, .reveal-left, .reveal-right"
+    const getElements = (root: ParentNode, selector: string) => {
+      const elements: Element[] = []
+
+      if (root instanceof Element && root.matches(selector)) {
+        elements.push(root)
+      }
+
+      root.querySelectorAll(selector).forEach((el) => elements.push(el))
+      return elements
+    }
+
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches
 
     if (prefersReducedMotion) {
-      // Immediately reveal everything — no animation
-      const elements = container.querySelectorAll(
-        ".reveal, .reveal-left, .reveal-right"
-      )
-      elements.forEach((el) => el.classList.add("reveal-visible"))
-      return
-    }
+      const revealImmediately = (root: ParentNode) => {
+        getElements(root, revealSelector).forEach((el) => {
+          el.classList.add("reveal-visible")
+        })
+      }
 
-    // Apply stagger delays to children inside [data-stagger] containers
-    const staggerContainers = container.querySelectorAll("[data-stagger]")
-    staggerContainers.forEach((staggerEl) => {
-      const staggerMs = parseInt(staggerEl.getAttribute("data-stagger") || "100", 10)
-      const children = staggerEl.querySelectorAll(".reveal, .reveal-left, .reveal-right")
-      children.forEach((child, i) => {
-        const el = child as HTMLElement
-        // Only set if not already manually set
-        if (!el.style.transitionDelay) {
-          el.style.transitionDelay = `${i * staggerMs}ms`
-        }
+      revealImmediately(container)
+
+      const reducedMotionObserver = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          mutation.addedNodes.forEach((node) => {
+            if (node instanceof Element) {
+              revealImmediately(node)
+            }
+          })
+        })
       })
-    })
+
+      reducedMotionObserver.observe(container, { childList: true, subtree: true })
+      return () => reducedMotionObserver.disconnect()
+    }
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("reveal-visible")
-            observer.unobserve(entry.target) // Once revealed, stop observing
+            observer.unobserve(entry.target)
           }
         })
       },
@@ -62,13 +68,54 @@ export function useScrollReveal() {
         rootMargin: "0px 0px -40px 0px",
       }
     )
+    const observedElements = new WeakSet<Element>()
 
-    const elements = container.querySelectorAll(
-      ".reveal, .reveal-left, .reveal-right"
-    )
-    elements.forEach((el) => observer.observe(el))
+    const applyStaggerDelays = (root: ParentNode) => {
+      getElements(root, "[data-stagger]").forEach((staggerEl) => {
+        const staggerMs = parseInt(staggerEl.getAttribute("data-stagger") || "100", 10)
+        const children = staggerEl.querySelectorAll(revealSelector)
 
-    return () => observer.disconnect()
+        children.forEach((child, i) => {
+          const el = child as HTMLElement
+
+          if (!el.style.transitionDelay) {
+            el.style.transitionDelay = `${i * staggerMs}ms`
+          }
+        })
+      })
+    }
+
+    const observeRevealElements = (root: ParentNode) => {
+      getElements(root, revealSelector).forEach((el) => {
+        if (observedElements.has(el) || el.classList.contains("reveal-visible")) {
+          return
+        }
+
+        observedElements.add(el)
+        observer.observe(el)
+      })
+    }
+
+    applyStaggerDelays(container)
+    observeRevealElements(container)
+
+    const mutationObserver = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        mutation.addedNodes.forEach((node) => {
+          if (node instanceof Element) {
+            applyStaggerDelays(node)
+            observeRevealElements(node)
+          }
+        })
+      })
+    })
+
+    mutationObserver.observe(container, { childList: true, subtree: true })
+
+    return () => {
+      mutationObserver.disconnect()
+      observer.disconnect()
+    }
   }, [])
 
   return containerRef

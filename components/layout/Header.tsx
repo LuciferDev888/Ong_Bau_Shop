@@ -12,11 +12,8 @@ const SECTION_IDS = [
   "spotlight",
   "products",
   "benefits",
-  "testimonials",
-  "faq",
   "location",
   "lead-form",
-  "contact",
 ]
 
 export function Header() {
@@ -77,14 +74,12 @@ export function Header() {
 
   const menuItems = isVi
     ? [
-        { label: "TRANG CHỦ", href: "#home" },
-        { label: "BỘ SƯU TẬP", href: "#categories" },
-        { label: "CHỦ LỰC", href: "#spotlight" },
-        { label: "SẢN PHẨM", href: "#products" },
-        { label: "VỀ CHÚNG TÔI", href: "#benefits" },
-        { label: "ĐÁNH GIÁ", href: "#testimonials" },
-        { label: "HỎI ĐÁP", href: "#faq" },
-        { label: "LIÊN HỆ", href: "#location" },
+        { label: "TRANG CHU", href: "#home" },
+        { label: "BO SUU TAP", href: "#categories" },
+        { label: "CHU LUC", href: "#spotlight" },
+        { label: "SAN PHAM", href: "#products" },
+        { label: "VE CHUNG TOI", href: "#benefits" },
+        { label: "LIEN HE", href: "#location" },
       ]
     : [
         { label: "HOME", href: "#home" },
@@ -92,11 +87,8 @@ export function Header() {
         { label: "SPOTLIGHT", href: "#spotlight" },
         { label: "PRODUCTS", href: "#products" },
         { label: "WHY US", href: "#benefits" },
-        { label: "REVIEWS", href: "#testimonials" },
-        { label: "FAQ", href: "#faq" },
         { label: "CONTACT", href: "#location" },
       ]
-
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${

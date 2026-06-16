@@ -367,7 +367,7 @@ export function ProductsSection({ vi, en, items: viItems }: BilingualProductsPro
           {/* Product List */}
           <div className="reveal reveal-left lg:col-span-8 order-2 lg:order-1 space-y-6">
             {paginatedProducts.length > 0 ? (
-              <div className={`grid grid-cols-1 md:grid-cols-2 gap-4 transition-all duration-300 ease-in-out ${
+              <div data-stagger="70" className={`grid grid-cols-1 md:grid-cols-2 gap-4 transition-all duration-300 ease-in-out ${
                 isTransitioning ? "opacity-30 translate-y-2 blur-[2px]" : "opacity-100 translate-y-0 blur-none"
               }`}>
                 {paginatedProducts.map((product) => {
@@ -376,73 +376,84 @@ export function ProductsSection({ vi, en, items: viItems }: BilingualProductsPro
                   )
 
                   return (
-                    <div
-                      key={product.id}
-                      onClick={() => handleProductClick(product)}
-                      className={`group flex items-center p-4 rounded-xl cursor-pointer transition-all duration-300 justify-between gap-4 border ${
-                        product.id === activeDetailProduct?.id
-                          ? "border-primary bg-card/60 shadow-xl shadow-primary/15 ring-1 ring-primary/30 scale-[1.01]"
-                          : "border-border/40 bg-card/30 hover:bg-card/60 hover:border-primary/40 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 hover:scale-[1.005]"
-                      }`}
-                    >
-                      {/* Thumbnail */}
-                      <div className="relative w-20 h-20 rounded-lg bg-card/60 overflow-hidden shrink-0 border border-border/30">
-                        <Image
-                          src={product.image || "/images/Logo/logo.jpg"}
-                          alt={product.name}
-                          fill
-                          sizes="80px"
-                          className="object-cover object-center group-hover:scale-110 transition-transform duration-500"
-                        />
-                        {discountPercent > 0 && (
-                          <div className="absolute top-1 left-1 bg-primary text-primary-foreground text-[7px] font-extrabold px-1.5 py-0.5 rounded">
-                            -{discountPercent}%
+                    <div key={product.id} className="reveal product-card-reveal">
+                      <div
+                        role="button"
+                        tabIndex={0}
+                        onClick={() => handleProductClick(product)}
+                        onKeyDown={(event) => {
+                          if (event.key === "Enter" || event.key === " ") {
+                            event.preventDefault()
+                            handleProductClick(product)
+                          }
+                        }}
+                        className={`product-card group flex items-center p-4 rounded-xl cursor-pointer justify-between gap-4 border focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 ${
+                          product.id === activeDetailProduct?.id
+                            ? "product-card-selected border-primary bg-card/60 shadow-xl shadow-primary/15 ring-1 ring-primary/30"
+                            : "border-border/40 bg-card/30"
+                        }`}
+                      >
+                        {/* Thumbnail */}
+                        <div className="product-card-thumb relative w-20 h-20 rounded-lg bg-card/60 overflow-hidden shrink-0 border border-border/30">
+                          <div className="product-card-image-motion absolute inset-0">
+                            <Image
+                              src={product.image || "/images/Logo/logo.jpg"}
+                              alt={product.name}
+                              fill
+                              sizes="80px"
+                              className="product-card-image object-cover object-center"
+                            />
                           </div>
-                        )}
-                      </div>
-
-                      {/* Product Info */}
-                      <div className="flex-1 min-w-0 space-y-1">
-                        <div className="flex items-center gap-1.5">
-                          {product.isHot && (
-                            <span className="inline-flex items-center text-red-500 text-[9px] font-bold gap-0.5">
-                              <Flame className="w-3 h-3 fill-current" />
-                              HOT
-                            </span>
+                          {discountPercent > 0 && (
+                            <div className="absolute top-1 left-1 bg-primary text-primary-foreground text-[7px] font-extrabold px-1.5 py-0.5 rounded">
+                              -{discountPercent}%
+                            </div>
                           )}
-                          <div className="flex text-primary">
-                            {[...Array(5)].map((_, i) => (
-                              <Star
-                                key={i}
-                                className={`w-2.5 h-2.5 ${
-                                  i < Math.floor(product.rating) ? "fill-primary" : "text-border"
-                                }`}
-                              />
-                            ))}
-                          </div>
                         </div>
 
-                        <h3 className="text-xs sm:text-sm font-bold text-foreground group-hover:text-primary transition-colors truncate">
-                          {product.name}
-                        </h3>
+                        {/* Product Info */}
+                        <div className="flex-1 min-w-0 space-y-1">
+                          <div className="flex items-center gap-1.5">
+                            {product.isHot && (
+                              <span className="inline-flex items-center text-red-500 text-[9px] font-bold gap-0.5">
+                                <Flame className="w-3 h-3 fill-current" />
+                                HOT
+                              </span>
+                            )}
+                            <div className="flex text-primary">
+                              {[...Array(5)].map((_, i) => (
+                                <Star
+                                  key={i}
+                                  className={`w-2.5 h-2.5 ${
+                                    i < Math.floor(product.rating) ? "fill-primary" : "text-border"
+                                  }`}
+                                />
+                              ))}
+                            </div>
+                          </div>
 
-                        {product.sizes && (
-                          <span className="text-[9px] text-muted-foreground uppercase font-medium tracking-wider">
-                            Size: {product.sizes.join(", ")}
-                          </span>
-                        )}
-                      </div>
+                          <h3 className="text-xs sm:text-sm font-bold text-foreground group-hover:text-primary transition-colors truncate">
+                            {product.name}
+                          </h3>
 
-                      {/* Price */}
-                      <div className="text-right shrink-0 flex flex-col items-end gap-1.5">
-                        <span className="text-sm font-extrabold text-primary">
-                          {formatPrice(product.price)}
-                        </span>
-                        {product.originalPrice > product.price && (
-                          <span className="text-[9px] text-muted-foreground line-through">
-                            {formatPrice(product.originalPrice)}
+                          {product.sizes && (
+                            <span className="text-[9px] text-muted-foreground uppercase font-medium tracking-wider">
+                              Size: {product.sizes.join(", ")}
+                            </span>
+                          )}
+                        </div>
+
+                        {/* Price */}
+                        <div className="text-right shrink-0 flex flex-col items-end gap-1.5">
+                          <span className="text-sm font-extrabold text-primary">
+                            {formatPrice(product.price)}
                           </span>
-                        )}
+                          {product.originalPrice > product.price && (
+                            <span className="text-[9px] text-muted-foreground line-through">
+                              {formatPrice(product.originalPrice)}
+                            </span>
+                          )}
+                        </div>
                       </div>
                     </div>
                   )
@@ -483,23 +494,25 @@ export function ProductsSection({ vi, en, items: viItems }: BilingualProductsPro
           {/* Right Column: Detail Panel */}
           {activeDetailProduct && (
             <div id="products-detail-panel" className="reveal reveal-right lg:col-span-4 lg:sticky lg:top-24 order-1 lg:order-2 lg:block hidden">
-              <div className="glass-panel border border-border/40 rounded-2xl overflow-hidden shadow-xl">
+              <div className="product-detail-panel glass-panel border border-border/40 rounded-2xl overflow-hidden shadow-xl">
                 <div
                   key={animationKey}
                   className="space-y-0 product-detail-animate"
                 >
                   {/* Product Image Container */}
-                  <div className="relative w-full aspect-[4/3] bg-card/30 overflow-hidden">
+                  <div className="product-detail-media relative w-full aspect-[4/3] bg-card/30 overflow-hidden">
                     {/* Image itself fades/slides in smoothly (Delay 3) and floats */}
-                    <div className="product-detail-item product-detail-delay-3 w-full h-full relative animate-float-slow">
-                      <Image
-                        src={activeDetailProduct.image}
-                        alt={activeDetailProduct.name}
-                        fill
-                        sizes="(max-width: 1024px) 100vw, 33vw"
-                        className="object-cover object-center select-none"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/10 to-transparent" />
+                    <div className="product-detail-item product-detail-delay-3 w-full h-full relative">
+                      <div className="product-detail-image-float absolute inset-0">
+                        <Image
+                          src={activeDetailProduct.image}
+                          alt={activeDetailProduct.name}
+                          fill
+                          sizes="(max-width: 1024px) 100vw, 33vw"
+                          className="object-cover object-center select-none"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/10 to-transparent" />
+                      </div>
                     </div>
 
                     {/* Badge appears first (Delay 1) */}
@@ -546,7 +559,7 @@ export function ProductsSection({ vi, en, items: viItems }: BilingualProductsPro
 
                       <button
                         onClick={handleBuyClick}
-                        className="btn-primary-gold !py-2.5 !px-5 !text-[11px] font-bold tracking-editorial uppercase flex items-center gap-1.5 shrink-0"
+                        className="product-cta-button btn-primary-gold !py-2.5 !px-5 !text-[11px] font-bold tracking-editorial uppercase flex items-center gap-1.5 shrink-0"
                       >
                         <ShoppingBag className="w-3.5 h-3.5" />
                         <span>{isVi ? "ĐẶT HÀNG" : "ORDER NOW"}</span>
@@ -679,7 +692,7 @@ export function ProductsSection({ vi, en, items: viItems }: BilingualProductsPro
           />
           {/* Card Container */}
           <div
-            className="relative z-10 w-full max-w-lg bg-card border-t sm:border border-border/40 rounded-t-2xl sm:rounded-2xl overflow-hidden shadow-2xl flex flex-col max-h-[85vh] sm:max-h-[90vh] animate-slide-up"
+            className="product-mobile-detail-panel relative z-10 w-full max-w-lg bg-card border-t sm:border border-border/40 rounded-t-2xl sm:rounded-2xl overflow-hidden shadow-2xl flex flex-col max-h-[85vh] sm:max-h-[90vh] animate-slide-up"
           >
             {/* Close Button */}
             <button
@@ -691,22 +704,26 @@ export function ProductsSection({ vi, en, items: viItems }: BilingualProductsPro
             </button>
 
             {/* Scrollable Content */}
-            <div className="overflow-y-auto overflow-x-hidden pb-6">
+            <div key={animationKey} className="overflow-y-auto overflow-x-hidden pb-6 product-detail-animate">
               {/* Product Image Container */}
-              <div className="relative w-full aspect-[4/3] bg-muted/5 overflow-hidden animate-float-slow">
-                <Image
-                  src={activeDetailProduct.image}
-                  alt={activeDetailProduct.name}
-                  fill
-                  sizes="(max-width: 640px) 100vw, 500px"
-                  className="object-contain select-none p-4"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent" />
-                <span className="absolute top-4 left-4 text-[9px] font-bold text-primary tracking-editorial-wide uppercase bg-background/80 backdrop-blur-sm px-2.5 py-1 rounded border border-primary/10">
+              <div className="product-detail-media relative w-full aspect-[4/3] bg-muted/5 overflow-hidden">
+                <div className="product-detail-item product-detail-delay-3 absolute inset-0">
+                  <div className="product-detail-image-float absolute inset-0">
+                    <Image
+                      src={activeDetailProduct.image}
+                      alt={activeDetailProduct.name}
+                      fill
+                      sizes="(max-width: 640px) 100vw, 500px"
+                      className="object-contain select-none p-4"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent" />
+                  </div>
+                </div>
+                <span className="absolute top-4 left-4 text-[9px] font-bold text-primary tracking-editorial-wide uppercase bg-background/80 backdrop-blur-sm px-2.5 py-1 rounded border border-primary/10 product-detail-item product-detail-delay-1">
                   {getProductDetails(activeDetailProduct).badge}
                 </span>
                 {activeDetailProduct.isHot && (
-                  <span className="absolute top-4 right-16 bg-red-600 text-white text-[9px] font-extrabold px-2 py-0.5 rounded flex items-center gap-1">
+                  <span className="absolute top-4 right-16 bg-red-600 text-white text-[9px] font-extrabold px-2 py-0.5 rounded flex items-center gap-1 product-detail-item product-detail-delay-1">
                     <Flame className="w-3 h-3 fill-current" />
                     {isVi ? "BÁN CHẠY" : "HOT SELLER"}
                   </span>
@@ -716,16 +733,16 @@ export function ProductsSection({ vi, en, items: viItems }: BilingualProductsPro
               {/* Product Info */}
               <div className="p-5 space-y-4">
                 <div className="space-y-1">
-                  <span className="text-[9px] font-bold text-muted-foreground uppercase tracking-editorial-wide block">
+                  <span className="text-[9px] font-bold text-muted-foreground uppercase tracking-editorial-wide block product-detail-item product-detail-delay-1">
                     {isVi ? "CHI TIẾT TRANG BỊ" : "GEAR DETAILS"}
                   </span>
-                  <h3 className="text-base sm:text-lg font-bold text-foreground leading-snug">
+                  <h3 className="text-base sm:text-lg font-bold text-foreground leading-snug product-detail-item product-detail-delay-2">
                     {activeDetailProduct.name}
                   </h3>
                 </div>
 
                 {/* Price and CTA */}
-                <div className="flex items-center justify-between gap-4 p-4 border border-border/30 rounded-xl bg-secondary/20">
+                <div className="flex items-center justify-between gap-4 p-4 border border-border/30 rounded-xl bg-secondary/20 product-detail-item product-detail-delay-4">
                   <div className="flex flex-col">
                     <span className="text-[9px] font-bold text-muted-foreground uppercase tracking-editorial-wide">
                       {isVi ? "GIÁ BÁN" : "PRICE"}
@@ -747,18 +764,18 @@ export function ProductsSection({ vi, en, items: viItems }: BilingualProductsPro
                       setIsOrderModalOpen(true)
                       setIsMobileDetailOpen(false)
                     }}
-                    className="btn-primary-gold !py-2.5 !px-5 !text-[11px] font-bold tracking-editorial uppercase flex items-center gap-1.5 shrink-0 shadow-none hover:shadow-none"
+                    className="product-cta-button btn-primary-gold !py-2.5 !px-5 !text-[11px] font-bold tracking-editorial uppercase flex items-center gap-1.5 shrink-0 shadow-none hover:shadow-none"
                   >
                     <ShoppingBag className="w-3.5 h-3.5" />
                     <span>{isVi ? "ĐẶT HÀNG" : "ORDER NOW"}</span>
                   </button>
                 </div>
 
-                <div className="border-t border-border/10" />
+                <div className="border-t border-border/10 product-detail-item product-detail-delay-4" />
 
                 {/* Mobile Details list */}
                 <div className="space-y-3">
-                  <div className="border border-border/30 rounded-xl bg-card/10 p-3.5">
+                  <div className="border border-border/30 rounded-xl bg-card/10 p-3.5 product-detail-item product-detail-delay-5">
                     <h4 className="text-[10px] font-bold text-primary tracking-editorial-wide uppercase mb-1.5">
                       {isVi ? "MÔ TẢ SẢN PHẨM" : "DESCRIPTION"}
                     </h4>
@@ -767,7 +784,7 @@ export function ProductsSection({ vi, en, items: viItems }: BilingualProductsPro
                     </p>
                   </div>
 
-                  <div className="border border-border/30 rounded-xl bg-card/10 p-3.5">
+                  <div className="border border-border/30 rounded-xl bg-card/10 p-3.5 product-detail-item product-detail-delay-6">
                     <h4 className="text-[10px] font-bold text-primary tracking-editorial-wide uppercase mb-1.5">
                       {isVi ? "ĐẶC ĐIỂM NỔI BẬT" : "KEY HIGHLIGHTS"}
                     </h4>
@@ -782,7 +799,7 @@ export function ProductsSection({ vi, en, items: viItems }: BilingualProductsPro
                   </div>
 
                   {activeDetailProduct.sizes && (
-                    <div className="border border-border/30 rounded-xl bg-card/10 p-3.5 space-y-3">
+                    <div className="border border-border/30 rounded-xl bg-card/10 p-3.5 space-y-3 product-detail-item product-detail-delay-7">
                       <h4 className="text-[10px] font-bold text-primary tracking-editorial-wide uppercase">
                         {isVi ? "KÍCH THƯỚC SẴN CÓ" : "AVAILABLE SIZES"}
                       </h4>

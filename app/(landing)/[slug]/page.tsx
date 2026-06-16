@@ -6,11 +6,8 @@ import SpotlightSection from "@/components/sections/SpotlightSection"
 import ProductsSection from "@/components/sections/ProductsSection"
 import BenefitsSection from "@/components/sections/BenefitsSection"
 import PromoSection from "@/components/sections/PromoSection"
-import TestimonialsSection from "@/components/sections/TestimonialsSection"
 import LeadFormSection from "@/components/sections/LeadFormSection"
-import FAQSection from "@/components/sections/FAQSection"
 import StoreLocationSection from "@/components/sections/StoreLocationSection"
-import CTAFooterSection from "@/components/sections/CTAFooterSection"
 import { getLandingPageContent } from "@/lib/content"
 
 // SEO Metadata Generation (Defaults to VI metadata)
@@ -68,12 +65,6 @@ export default async function LandingPage({
       {/* Interactive Promo Banner */}
       <PromoSection vi={content.vi.promo} en={content.en.promo} />
 
-      {/* Testimonials social proof */}
-      <TestimonialsSection vi={content.vi.testimonials} en={content.en.testimonials} />
-
-      {/* FAQ Accordion */}
-      <FAQSection vi={content.vi.faq} en={content.en.faq} />
-
       {/* Store Location Section */}
       <StoreLocationSection />
 
@@ -83,8 +74,6 @@ export default async function LandingPage({
         products={content.vi.products.items}
       />
 
-      {/* CTA Footer right above layout footer */}
-      <CTAFooterSection vi={content.vi.cta} en={content.en.cta} />
     </main>
   )
 }

@@ -117,11 +117,11 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="#testimonials"
+                  href="#benefits"
                   className="text-xs text-muted-foreground hover:text-foreground transition-colors"
-                  onClick={() => handleLinkClick("reviews", "#testimonials")}
+                  onClick={() => handleLinkClick("benefits", "#benefits")}
                 >
-                  {isVi ? "Đánh giá từ khách hàng" : "Customer Reviews"}
+                  {isVi ? "Loi ich khi mua hang" : "Why Choose Us"}
                 </a>
               </li>
             </ul>
@@ -135,27 +135,27 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#faq"
+                  href="#lead-form"
                   className="text-xs text-muted-foreground hover:text-foreground transition-colors"
-                  onClick={() => handleLinkClick("policy_shipping", "#faq")}
+                  onClick={() => handleLinkClick("policy_shipping", "#lead-form")}
                 >
                   {isVi ? "Giao hàng & Kiểm hàng" : "Shipping & Inspection"}
                 </a>
               </li>
               <li>
                 <a
-                  href="#faq"
+                  href="#lead-form"
                   className="text-xs text-muted-foreground hover:text-foreground transition-colors"
-                  onClick={() => handleLinkClick("policy_returns", "#faq")}
+                  onClick={() => handleLinkClick("policy_returns", "#lead-form")}
                 >
                   {isVi ? "Đổi trả sản phẩm trong 7 ngày" : "7-Day Returns & Exchanges"}
                 </a>
               </li>
               <li>
                 <a
-                  href="#faq"
+                  href="#lead-form"
                   className="text-xs text-muted-foreground hover:text-foreground transition-colors"
-                  onClick={() => handleLinkClick("policy_warranty", "#faq")}
+                  onClick={() => handleLinkClick("policy_warranty", "#lead-form")}
                 >
                   {isVi ? "Chính sách bảo hành giày" : "Cleat Warranty Policy"}
                 </a>
