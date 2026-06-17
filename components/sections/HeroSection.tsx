@@ -269,7 +269,7 @@ export function HeroSection({ vi, en }: BilingualHeroProps) {
             <div className="reveal reveal-delay-1">
               <div className="section-number justify-center lg:justify-start">
                 <span className="num">01</span>
-                <span>{isVi ? "TRANG BỊ CHUYÊN NGHIỆP" : "ELITE FOOTBALL GEAR"}</span>
+                <span className="whitespace-nowrap">{isVi ? "TRANG BỊ CHUYÊN NGHIỆP" : "ELITE FOOTBALL GEAR"}</span>
               </div>
             </div>
 
@@ -282,11 +282,11 @@ export function HeroSection({ vi, en }: BilingualHeroProps) {
             </div>
 
             {/* Main Headline */}
-            <h1 className="reveal reveal-delay-3 text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black tracking-tight leading-[1.05] uppercase">
-              <span className="text-gradient-white block">
+            <h1 className="reveal reveal-delay-3 font-black tracking-tight leading-[1.05] uppercase">
+              <span className="text-gradient-white block text-[20px] min-[360px]:text-[22px] min-[400px]:text-[24px] sm:text-5xl lg:text-6xl xl:text-7xl whitespace-nowrap sm:whitespace-normal">
                 {data.headline.split("-")[0]}
               </span>
-              <span className="text-gradient-gold block min-h-[1.2em]">
+              <span className="text-gradient-gold block min-h-[1.2em] text-[20px] min-[360px]:text-[22px] min-[400px]:text-[24px] sm:text-5xl lg:text-6xl xl:text-7xl">
                 {currentText}
                 <span className="animate-blink ml-1 text-primary">|</span>
               </span>

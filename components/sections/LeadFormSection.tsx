@@ -39,7 +39,7 @@ export function LeadFormSection({ campaignName, products }: LeadFormSectionProps
           <h2 className="reveal reveal-delay-1 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight uppercase leading-tight">
             {isVi ? "ĐĂNG KÝ" : "REGISTER FOR"}{" "}
             <span className="text-gradient-gold">
-              {isVi ? "TƯ VẤN NHẬN QUÀ" : "FREE ADVICE & GIFTS"}
+              {isVi ? "TƯ VẤN NHẬN\u00A0QUÀ" : "FREE ADVICE &\u00A0GIFTS"}
             </span>
           </h2>
           

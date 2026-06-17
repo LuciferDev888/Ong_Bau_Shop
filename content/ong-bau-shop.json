@@ -699,7 +699,7 @@
       "discountCode": "ONGBAU30",
       "ctaText": "NHẬN ƯU ĐÃI NGAY",
       "ctaHref": "#lead-form",
-      "image": "/images/overview/562162745_723586010734835_2162876265339829697_n.jpg",
+      "image": "/images/overview/shop_promo.jpg",
       "endsInSeconds": 86400
     },
     "testimonials": {
@@ -754,7 +754,7 @@
       }
     ],
     "cta": {
-      "title": "NÂNG TẦM TRẢI NGHIỆM BÓNG ĐÁ CỦA BẠN",
+      "title": "NÂNG TẦM TRẢI NGHIỆM BÓNG ĐÁ CỦA\u00a0BẠN",
       "description": "Đừng để trang bị kém chất lượng cản bước đam mê. Đăng ký nhận tư vấn chọn trang bị bóng đá phù hợp và nhận ngay mã giảm giá 30% từ Ông Bầu Shop.",
       "ctaText": "ĐĂNG KÝ TƯ VẤN NGAY",
       "ctaHref": "#lead-form"
@@ -1460,7 +1460,7 @@
       "discountCode": "ONGBAU30",
       "ctaText": "REDEEM YOUR SAVINGS NOW",
       "ctaHref": "#lead-form",
-      "image": "/images/overview/562162745_723586010734835_2162876265339829697_n.jpg",
+      "image": "/images/overview/shop_promo.jpg",
       "endsInSeconds": 86400
     },
     "testimonials": {
@@ -1515,7 +1515,7 @@
       }
     ],
     "cta": {
-      "title": "ELEVATE YOUR GAME TO THE PRO LEVEL",
+      "title": "ELEVATE YOUR GAME TO THE PRO\u00a0LEVEL",
       "description": "Do not let low-quality gear hold back your passion. Connect with our experts today to receive custom recommendations and an instant 30% discount code.",
       "ctaText": "GET EXPERT CONSULTATION",
       "ctaHref": "#lead-form"
